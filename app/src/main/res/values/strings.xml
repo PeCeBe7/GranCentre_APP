@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">GranCentre APP</string>
+    <string name="titol1_hotel">Fonda Europa</string>
+    <string name="titol2_hotel">Hotel Granollers</string>
+    <string name="titol3_hotel">Hotel Iris</string>
+    <string name="titol4_hotel">Hotel B&amp;B</string>
+    <string name="titol5_hotel">Hotel Atenea</string>
+    <string name="titol6_hotel">Hotel H</string>
+    <string name="titol7_hotel">Hotel Ciutat</string>
+    <string name="titol_hotel">Hotels</string>
+    <string name="telf">Trucar</string>
+    <string name="web">Web</string>
 </resources>

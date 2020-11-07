@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(id)
         {
             case "bt_restaurants":
-                //Intent intentR = new Intent(this,MainRestaurant.class);
-                //startActivity(intentR);
+                Intent intentR = new Intent(this,MainRestaurant.class);
+                startActivity(intentR);
                 ;break;
             case "bt_hotels":
-               // Intent intentH = new Intent(this,MainHotels.class);
-                //startActivity(intentH);
+               Intent intentH = new Intent(this,MainHotels.class);
+               startActivity(intentH);
                 ;break;
         }
     }

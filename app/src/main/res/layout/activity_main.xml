@@ -14,7 +14,7 @@
             android:id="@+id/bt_business"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="35dp"
+            android:layout_marginEnd="35dp"
             android:background="@drawable/business" />
 
         <Button
@@ -34,7 +34,7 @@
             android:id="@+id/bt_movies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="35dp"
+            android:layout_marginEnd="35dp"
             android:background="@drawable/movies" />
 
         <Button
@@ -54,7 +54,7 @@
             android:id="@+id/bt_hotels"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="35dp"
+            android:layout_marginEnd="35dp"
             android:background="@drawable/hotels" />
 
         <Button
