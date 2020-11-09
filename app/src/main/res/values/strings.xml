@@ -10,13 +10,7 @@
     <string name="titol_hotel">Hotels</string>
     <string name="telf">Trucar</string>
     <string name="web">Web</string>
-    <string name="desc1">Fonda Europa,fundat al 1771 com a patrimoni i símbol de Granollers</string>
-    <string name="desc2">Hotel Granollers,recent renovat, establiment modern i funcional</string>
-    <string name="desc3">Hotel Iris, establiment modern i situat a prop de tots els serveis</string>
-    <string name="desc4">Hotel B&amp;B, allotjament econòmic a la periferia de Granollers</string>
-    <string name="desc5">Hotel Atenea, allotjament ideal per aconteixements deportius</string>
-    <string name="desc6">Hotel H, establiment econòmic a la periferia de Granolles i aprop del circuit de F1</string>
-    <string name="desc7">Hotel Ciutat de Granollers, allotjament ampli on proporcionem un bon confort</string>
+    <string name="rating">Votar</string>
     <string-array name="planets_array">
         <item>&#9734;</item>
         <item>&#9734;&#9734;</item>

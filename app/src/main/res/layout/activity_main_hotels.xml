@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainHotels">
@@ -56,13 +56,16 @@
                     android:layout_marginTop="15dp"
                     android:layout_toStartOf="@id/primer_Hotel"
                     android:src="@drawable/fonda" />
-                <TextView
-                    android:layout_width="170dp"
+                <RatingBar
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/desc1"
-                    android:id="@+id/desc1"
                     android:layout_toEndOf="@id/img_fonda"
-                    android:layout_below="@id/primer_Hotel"/>
+                    android:layout_below="@+id/primer_Hotel"
+                    android:layout_marginLeft="5dp"
+                    android:numStars="3"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/desc1"
+                    android:saveEnabled="true"/>
                 <Button
                     android:id="@+id/trucar1"
                     android:layout_width="wrap_content"
@@ -116,13 +119,16 @@
                     android:layout_marginTop="5dp"
                     android:layout_toStartOf="@id/segon_Hotel"
                     android:src="@drawable/granollers" />
-                <TextView
-                    android:layout_width="170dp"
+                <RatingBar
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/desc2"
-                    android:id="@+id/desc2"
                     android:layout_toEndOf="@id/img_granollers"
-                    android:layout_below="@id/segon_Hotel"/>
+                    android:layout_below="@+id/segon_Hotel"
+                    android:layout_marginLeft="5dp"
+                    android:numStars="3"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/desc2"
+                    android:saveEnabled="true"/>
 
                 <Button
                     android:id="@+id/trucar2"
@@ -165,7 +171,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="5dp"
-                    android:layout_marginEnd="85dp"
+                    android:layout_marginEnd="75dp"
                     android:text="@string/titol3_hotel"
                     android:textSize="20sp"
                     android:textColor="@color/black"/>
@@ -174,16 +180,21 @@
                     android:id="@+id/img_iris"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="20dp"
                     android:layout_toStartOf="@id/tercer_Hotel"
                     android:src="@drawable/iris" />
-                <TextView
-                    android:layout_width="170dp"
+
+                <RatingBar
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/desc3"
-                    android:id="@+id/desc3"
                     android:layout_toEndOf="@id/img_iris"
-                    android:layout_below="@id/tercer_Hotel"/>
+                    android:layout_below="@+id/tercer_Hotel"
+                    android:layout_marginLeft="5dp"
+                    android:numStars="3"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/desc3"
+                    android:saveEnabled="true"/>
+
                 <Button
                     android:id="@+id/trucar3"
                     android:layout_width="wrap_content"
@@ -237,13 +248,16 @@
                     android:layout_marginTop="5dp"
                     android:layout_toStartOf="@id/quart_Hotel"
                     android:src="@drawable/bib" />
-                <TextView
-                    android:layout_width="170dp"
+                <RatingBar
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/desc4"
-                    android:id="@+id/desc4"
                     android:layout_toEndOf="@id/img_bib"
-                    android:layout_below="@id/quart_Hotel"/>
+                    android:layout_below="@+id/quart_Hotel"
+                    android:layout_marginLeft="5dp"
+                    android:numStars="3"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/desc4"
+                    android:saveEnabled="true"/>
 
                 <Button
                     android:id="@+id/trucar4"
@@ -298,13 +312,16 @@
                     android:layout_marginTop="5dp"
                     android:layout_toStartOf="@id/cinque_Hotel"
                     android:src="@drawable/atenea" />
-                <TextView
-                    android:layout_width="170dp"
+                <RatingBar
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/desc5"
-                    android:id="@+id/desc5"
                     android:layout_toEndOf="@id/img_atenea"
-                    android:layout_below="@id/cinque_Hotel"/>
+                    android:layout_below="@+id/cinque_Hotel"
+                    android:layout_marginLeft="5dp"
+                    android:numStars="3"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/desc5"
+                    android:saveEnabled="true"/>
 
                 <Button
                     android:id="@+id/trucar5"
@@ -359,13 +376,16 @@
                     android:layout_marginTop="5dp"
                     android:layout_toStartOf="@id/sise_Hotel"
                     android:src="@drawable/hotelh" />
-                <TextView
-                    android:layout_width="170dp"
+                <RatingBar
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/desc6"
-                    android:id="@+id/desc6"
                     android:layout_toEndOf="@id/img_h"
-                    android:layout_below="@id/sise_Hotel"/>
+                    android:layout_below="@+id/sise_Hotel"
+                    android:layout_marginLeft="5dp"
+                    android:numStars="3"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/desc6"
+                    android:saveEnabled="true"/>
 
                 <Button
                     android:id="@+id/trucar6"
@@ -420,13 +440,16 @@
                     android:layout_marginTop="5dp"
                     android:layout_toStartOf="@id/sete_Hotel"
                     android:src="@drawable/ciutat" />
-                <TextView
-                    android:layout_width="170dp"
+                <RatingBar
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/desc7"
-                    android:id="@+id/desc7"
                     android:layout_toEndOf="@id/img_ciutat"
-                    android:layout_below="@id/sete_Hotel"/>
+                    android:layout_below="@+id/sete_Hotel"
+                    android:layout_marginLeft="5dp"
+                    android:numStars="3"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/desc7"
+                    android:saveEnabled="true" />
 
                 <Button
                     android:id="@+id/trucar7"

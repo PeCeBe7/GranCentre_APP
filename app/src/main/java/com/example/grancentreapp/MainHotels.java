@@ -2,17 +2,27 @@ package com.example.grancentreapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.LayerDrawable;
+import android.media.Image;
+import android.media.Rating;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainHotels extends AppCompatActivity implements View.OnClickListener {
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +32,13 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
                 R.array.planets_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sp.setAdapter(adapter);
+        ImageView iv1 = findViewById(R.id.img_fonda);
+        ImageView iv2 = findViewById(R.id.img_granollers);
+        ImageView iv3 = findViewById(R.id.img_iris);
+        ImageView iv4 = findViewById(R.id.img_bib);
+        ImageView iv5 = findViewById(R.id.img_atenea);
+        ImageView iv6 = findViewById(R.id.img_h);
+        ImageView iv7 = findViewById(R.id.img_ciutat);
         Button bt_trucar1 = findViewById(R.id.trucar1);
         Button bt_trucar2 = findViewById(R.id.trucar2);
         Button bt_trucar3 = findViewById(R.id.trucar3);
@@ -36,6 +53,11 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
         Button bt_web5 = findViewById(R.id.web5);
         Button bt_web6 = findViewById(R.id.web6);
         Button bt_web7 = findViewById(R.id.web7);
+        final RatingBar ratingBar3 = findViewById(R.id.desc1) ;
+        LayerDrawable stars = (LayerDrawable) ratingBar3.getProgressDrawable();
+        stars.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
+        stars.getDrawable(2).setColorFilter(Color.rgb(255,201,14), PorterDuff.Mode.SRC_ATOP);
+        stars.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
         bt_trucar1.setOnClickListener(this);
         bt_trucar2.setOnClickListener(this);
         bt_trucar3.setOnClickListener(this);
@@ -50,43 +72,65 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
         bt_web5.setOnClickListener(this);
         bt_web6.setOnClickListener(this);
         bt_web7.setOnClickListener(this);
+        iv1.setOnClickListener(this);
+        iv2.setOnClickListener(this);
+        iv3.setOnClickListener(this);
+        iv4.setOnClickListener(this);
+        iv5.setOnClickListener(this);
+        iv6.setOnClickListener(this);
+        iv7.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        Button bt = (Button) v;
-        switch(bt.getId())
+        if(v instanceof Button)
         {
-            case R.id.trucar1:
-                callHotel("938700312");break;
-            case R.id.trucar2:
-                callHotel("938795100");break;
-            case R.id.trucar3:
-                callHotel("938792929");break;
-            case R.id.trucar4:
-                callHotel("938407132");break;
-            case R.id.trucar5:
-                callHotel("938794820");break;
-            case R.id.trucar6:
-                callHotel("938606688");break;
-            case R.id.trucar7:
-                callHotel("938796220");break;
-            case R.id.web1:
-                enterWeb("https://hotelfondaeuropa.com");break;
-            case R.id.web2:
-                enterWeb("https://www.hotelgranollers.com");break;
-            case R.id.web3:
-                enterWeb("https://www.hoteliris.com");break;
-            case R.id.web4:
-                enterWeb("https://www.hotel-bb.com/es/hotel/barcelona-granollers");break;
-            case R.id.web5:
-                enterWeb("https://www.aparthotelateneavalles.com/es/");break;
-            case R.id.web6:
-                enterWeb("https://www.hotelh.es");break;
-            case R.id.web7:
-                enterWeb("https://www.hotelciutatgranollers.com");break;
+            Button bt = (Button) v;
+            switch(bt.getId())
+            {
+                case R.id.trucar1:
+                    callHotel("938700312");break;
+                case R.id.trucar2:
+                    callHotel("938795100");break;
+                case R.id.trucar3:
+                    callHotel("938792929");break;
+                case R.id.trucar4:
+                    callHotel("938407132");break;
+                case R.id.trucar5:
+                    callHotel("938794820");break;
+                case R.id.trucar6:
+                    callHotel("938606688");break;
+                case R.id.trucar7:
+                    callHotel("938796220");break;
+                case R.id.web1:
+                    enterWeb("https://hotelfondaeuropa.com");break;
+                case R.id.web2:
+                    enterWeb("https://www.hotelgranollers.com");break;
+                case R.id.web3:
+                    enterWeb("https://www.hoteliris.com");break;
+                case R.id.web4:
+                    enterWeb("https://www.hotel-bb.com/es/hotel/barcelona-granollers");break;
+                case R.id.web5:
+                    enterWeb("https://www.aparthotelateneavalles.com/es/");break;
+                case R.id.web6:
+                    enterWeb("https://www.hotelh.es");break;
+                case R.id.web7:
+                    enterWeb("https://www.hotelciutatgranollers.com");break;
+            }
+        }
+        else {
+            ImageView iv = (ImageView) v;
+            switch(iv.getId())
+            {
+                case R.id.img_fonda: localitzacio("41.6082916,2.2868614,17z");break;
+            }
         }
 
+
+    }
+    private void localitzacio (String str) {
+        Intent intent4 = new Intent (Intent.ACTION_VIEW, Uri.parse("geo:"+str));
+        startActivity(intent4);
     }
     private void enterWeb(String url)
     {
