@@ -1,7 +1,494 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-       xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-</LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainHotels">
+
+        <TextView
+            android:id="@+id/titol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/titol_hotel"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/titol"
+            android:entries="@array/spinner_array"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/primer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner"
+            android:layout_margin="10dp"
+            android:background="@color/cardview_dark_background"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/primer_Rest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/titol1_rest"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/img_viena"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp"
+                    android:layout_toStartOf="@+id/primer_Rest"
+                    android:src="@drawable/viena" />
+                <TextView
+                    android:id="@+id/desc1"
+                    android:layout_width="300dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/primer_Rest"
+                    android:layout_toEndOf="@id/img_viena"
+                    android:text="@string/desc1"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <RatingBar
+                    android:id="@+id/rat1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/desc1"
+                    android:layout_marginLeft="-50dp"
+                    android:layout_toEndOf="@id/img_viena"
+                    android:numStars="5"
+                    android:saveEnabled="true"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5" />
+                <Button
+                    android:id="@+id/trucar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat1"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/img_viena"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat1"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/trucar1"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/segon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/primer"
+            android:layout_margin="10dp"
+            android:background="@color/cardview_dark_background"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/segon_Rest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/titol1_rest"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/img_dc"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp"
+                    android:layout_toStartOf="@+id/segon_Rest"
+                    android:src="@drawable/viena" />
+                <TextView
+                    android:id="@+id/desc2"
+                    android:layout_width="300dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/primer_Rest"
+                    android:layout_toEndOf="@id/img_viena"
+                    android:text="@string/desc1"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <RatingBar
+                    android:id="@+id/rat1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/desc1"
+                    android:layout_marginLeft="-50dp"
+                    android:layout_toEndOf="@id/img_viena"
+                    android:numStars="5"
+                    android:saveEnabled="true"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5" />
+                <Button
+                    android:id="@+id/trucar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat1"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/img_viena"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat1"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/trucar1"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tercer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/segon"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tercer_Hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="75dp"
+                    android:text="@string/titol3_hotel"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/img_iris"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toStartOf="@id/tercer_Hotel"
+                    android:src="@drawable/iris" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/img_iris"
+                    android:layout_below="@+id/tercer_Hotel"
+                    android:layout_marginLeft="5dp"
+                    android:numStars="3"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/desc3"
+                    android:saveEnabled="true"/>
+
+                <Button
+                    android:id="@+id/trucar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desc3"
+                    android:layout_toEndOf="@id/img_iris"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desc3"
+                    android:layout_toEndOf="@id/trucar3"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/quart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tercer"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/quart_Hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="70dp"
+                    android:text="@string/titol4_hotel"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/img_bib"
+                    android:layout_width="wrap_content"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toStartOf="@id/quart_Hotel"
+                    android:src="@drawable/bib" />
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/img_bib"
+                    android:layout_below="@+id/quart_Hotel"
+                    android:layout_marginLeft="5dp"
+                    android:numStars="3"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/desc4"
+                    android:saveEnabled="true"/>
+
+                <Button
+                    android:id="@+id/trucar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desc4"
+                    android:layout_toEndOf="@id/img_bib"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desc4"
+                    android:layout_toEndOf="@id/trucar4"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cinque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quart"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/cinque_Hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="40dp"
+                    android:text="@string/titol5_hotel"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/img_atenea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toStartOf="@id/cinque_Hotel"
+                    android:src="@drawable/atenea" />
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/img_atenea"
+                    android:layout_below="@+id/cinque_Hotel"
+                    android:layout_marginLeft="5dp"
+                    android:numStars="3"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/desc5"
+                    android:saveEnabled="true"/>
+
+                <Button
+                    android:id="@+id/trucar5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desc5"
+                    android:layout_toEndOf="@id/img_atenea"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desc5"
+                    android:layout_toEndOf="@id/trucar5"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cinque"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/sise_Hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="100dp"
+                    android:text="@string/titol6_hotel"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/img_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toStartOf="@id/sise_Hotel"
+                    android:src="@drawable/hotelh" />
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/img_h"
+                    android:layout_below="@+id/sise_Hotel"
+                    android:layout_marginLeft="5dp"
+                    android:numStars="3"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/desc6"
+                    android:saveEnabled="true"/>
+
+                <Button
+                    android:id="@+id/trucar6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desc6"
+                    android:layout_toEndOf="@id/img_h"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desc6"
+                    android:layout_toEndOf="@id/trucar6"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sise"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/sete_Hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="@string/titol7_hotel"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/img_ciutat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toStartOf="@id/sete_Hotel"
+                    android:src="@drawable/ciutat" />
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/img_ciutat"
+                    android:layout_below="@+id/sete_Hotel"
+                    android:layout_marginLeft="5dp"
+                    android:numStars="3"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/desc7"
+                    android:saveEnabled="true" />
+
+                <Button
+                    android:id="@+id/trucar7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desc7"
+                    android:layout_toEndOf="@id/img_ciutat"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desc7"
+                    android:layout_toEndOf="@id/trucar7"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>

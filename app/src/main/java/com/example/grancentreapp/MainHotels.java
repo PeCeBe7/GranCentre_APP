@@ -1,5 +1,6 @@
 package com.example.grancentreapp;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -10,6 +11,7 @@ import android.graphics.drawable.LayerDrawable;
 import android.media.Image;
 import android.media.Rating;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -27,11 +29,6 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_hotels);
-        Spinner sp = findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.planets_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        sp.setAdapter(adapter);
         ImageView iv1 = findViewById(R.id.img_fonda);
         ImageView iv2 = findViewById(R.id.img_granollers);
         ImageView iv3 = findViewById(R.id.img_iris);
@@ -82,7 +79,7 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(final View v) {
         if(v instanceof Button)
         {
             Button bt = (Button) v;
@@ -119,17 +116,30 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
             }
         }
         else {
-            ImageView iv = (ImageView) v;
-            switch(iv.getId())
-            {
-                case R.id.img_fonda: localitzacio("41.6082916,2.2868614,17z");break;
+            if (v instanceof ImageView) {
+                ImageView iv = (ImageView) v;
+                switch (iv.getId()) {
+                    case R.id.img_fonda:
+                        localitzacio("geo:@41.6082916,2.2868614,17z");break;
+                    case R.id.img_granollers:
+                        localitzacio("geo:@41.594182,2.2812076,16z");break;
+                    case R.id.img_iris:
+                        localitzacio("geo:@41.6012923,2.2880538,17z");break;
+                    case R.id.img_bib:
+                        localitzacio("geo:@41.614031,2.2995126,16z");break;
+                    case R.id.img_atenea:
+                        localitzacio("geo:@41.5975141,2.2864746,16z");break;
+                    case R.id.img_h:
+                        localitzacio("geo:@41.5808675,2.281323,17z");break;
+                    case R.id.img_ciutat:
+                        localitzacio("geo:@41.600791,2.2939303,17z");break;
+                }
             }
+
         }
-
-
     }
     private void localitzacio (String str) {
-        Intent intent4 = new Intent (Intent.ACTION_VIEW, Uri.parse("geo:"+str));
+        Intent intent4 = new Intent (Intent.ACTION_VIEW, Uri.parse(str));
         startActivity(intent4);
     }
     private void enterWeb(String url)

@@ -22,7 +22,8 @@
             android:id="@+id/spinner"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:layout_below="@id/titol"/>
+            android:layout_below="@id/titol"
+            android:entries="@array/spinner_array"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/primer"

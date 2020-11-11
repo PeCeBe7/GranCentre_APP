@@ -11,7 +11,9 @@
     <string name="telf">Trucar</string>
     <string name="web">Web</string>
     <string name="rating">Votar</string>
-    <string-array name="planets_array">
+    <string name="desc1">Establiment amb una ample oferta culinaria europea on predominen antigues tradicion</string>
+    <string name="titol1_rest">Viena</string>
+    <string-array name="spinner_array">
         <item>&#9734;</item>
         <item>&#9734;&#9734;</item>
         <item>&#9734;&#9734;&#9734;</item>
