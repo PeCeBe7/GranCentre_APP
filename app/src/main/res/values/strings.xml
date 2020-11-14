@@ -22,6 +22,7 @@
     <string name="desc8">Des del principi busquem un equilibri entre el millor producte, un ambient acollidor i un bon servei logrant obtenir una optima relació qualitat / preu</string>
     <string name="desc9">En el restaurante marisquería Os Galegos llevamos la cocina gallega tradicional al centro de Granollers.</string>
     <string name="desc10">Bufet lliure que combina menjar tradicional chinés amb menjar tradicional español</string>
+    <string name="desc11">Un restaurant amb un servei de qualitat, un espai comfortable on compartir les millor tapes, combinades amb una carta selecta de vins.</string>
     <string name="titol1_rest">Viena</string>
     <string name="titol2_rest">Naguabo</string>
     <string name="titol3_rest">Burger King</string>
@@ -32,11 +33,10 @@
     <string name="titol8_rest">Wagaya</string>
     <string name="titol9_rest">Os Gallegos</string>
     <string name="titol10_rest">Wok 158</string>
+    <string name="titol11_rest">Pitapes</string>
     <string-array name="spinner_array">
-        <item>&#9734;</item>
         <item>&#9734;&#9734;</item>
         <item>&#9734;&#9734;&#9734;</item>
-        <item>&#9734;&#9734;&#9734;&#9734;</item>
-        <item>&#9734;&#9734;&#9734;&#9734;&#9734;</item>
+        <item>&#9734;&#9734;&#9734;&#9734;</item>s
     </string-array>
 </resources>

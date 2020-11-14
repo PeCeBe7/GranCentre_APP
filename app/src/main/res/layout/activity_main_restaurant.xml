@@ -2,19 +2,19 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         tools:context=".MainHotels">
 
         <TextView
             android:id="@+id/titol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:text="@string/titol_rest"
             android:textColor="@color/black"
             android:textSize="40sp" />
@@ -22,14 +22,12 @@
             android:id="@+id/spinner"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:layout_below="@id/titol"
             android:entries="@array/spinner_array"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/primer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/spinner"
             android:layout_margin="10dp"
             android:background="@color/cardview_dark_background"
             card_view:cardCornerRadius="5dp"
@@ -104,7 +102,6 @@
             android:id="@+id/segon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/primer"
             android:layout_margin="10dp"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
@@ -175,7 +172,6 @@
             android:id="@+id/tercer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/segon"
             android:layout_margin="10dp"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
@@ -247,7 +243,6 @@
             android:id="@+id/quart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tercer"
             android:layout_margin="10dp"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
@@ -318,7 +313,6 @@
             android:id="@+id/cinque"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/quart"
             android:layout_margin="10dp"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
@@ -390,7 +384,6 @@
             android:id="@+id/sise"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/cinque"
             android:layout_margin="10dp"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
@@ -462,7 +455,6 @@
             android:id="@+id/sete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/sise"
             android:layout_margin="10dp"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
@@ -534,7 +526,6 @@
             android:id="@+id/vuite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/sete"
             android:layout_margin="10dp"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
@@ -605,7 +596,6 @@
             android:id="@+id/nove"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/vuite"
             android:layout_margin="10dp"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
@@ -677,7 +667,6 @@
             android:id="@+id/deue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/nove"
             android:layout_margin="10dp"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
@@ -745,5 +734,76 @@
                     android:background="@color/transparent"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
-    </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/onze"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/onze_Rest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/titol11_rest"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/img_pitapes"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@+id/onze_Rest"
+                    android:src="@drawable/pitapes" />
+                <TextView
+                    android:id="@+id/desc11"
+                    android:layout_width="300dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/onze_Rest"
+                    android:layout_toEndOf="@id/img_pitapes"
+                    android:text="@string/desc11"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <RatingBar
+                    android:id="@+id/rat11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/desc11"
+                    android:layout_marginStart="-50dp"
+                    android:layout_toEndOf="@id/img_pitapes"
+                    android:numStars="5"
+                    android:saveEnabled="true"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5" />
+                <Button
+                    android:id="@+id/trucar11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat11"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/img_pitapes"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat11"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/trucar11"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 </ScrollView>

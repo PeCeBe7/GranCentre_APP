@@ -2,9 +2,11 @@ package com.example.grancentreapp;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.LayerDrawable;
@@ -23,59 +25,60 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainHotels extends AppCompatActivity implements View.OnClickListener {
+import java.util.ArrayList;
+
+public class MainHotels extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
+
+    CardView card1;
+    CardView card2;
+    CardView card3;
+    CardView card4;
+    CardView card5;
+    CardView card6;
+    CardView card7;
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_hotels);
-        ImageView iv1 = findViewById(R.id.img_fonda);
-        ImageView iv2 = findViewById(R.id.img_granollers);
-        ImageView iv3 = findViewById(R.id.img_iris);
-        ImageView iv4 = findViewById(R.id.img_bib);
-        ImageView iv5 = findViewById(R.id.img_atenea);
-        ImageView iv6 = findViewById(R.id.img_h);
+        ImageView iv1 = findViewById(R.id.img_fonda);ImageView iv2 = findViewById(R.id.img_granollers);
+        ImageView iv3 = findViewById(R.id.img_iris);ImageView iv4 = findViewById(R.id.img_bib);
+        ImageView iv5 = findViewById(R.id.img_atenea);ImageView iv6 = findViewById(R.id.img_h);
         ImageView iv7 = findViewById(R.id.img_ciutat);
-        Button bt_trucar1 = findViewById(R.id.trucar1);
-        Button bt_trucar2 = findViewById(R.id.trucar2);
-        Button bt_trucar3 = findViewById(R.id.trucar3);
-        Button bt_trucar4 = findViewById(R.id.trucar4);
-        Button bt_trucar5 = findViewById(R.id.trucar5);
-        Button bt_trucar6 = findViewById(R.id.trucar6);
+        Button bt_trucar1 = findViewById(R.id.trucar1);Button bt_trucar2 = findViewById(R.id.trucar2);
+        Button bt_trucar3 = findViewById(R.id.trucar3);Button bt_trucar4 = findViewById(R.id.trucar4);
+        Button bt_trucar5 = findViewById(R.id.trucar5);Button bt_trucar6 = findViewById(R.id.trucar6);
         Button bt_trucar7 = findViewById(R.id.trucar7);
-        Button bt_web1 = findViewById(R.id.web1);
-        Button bt_web2 = findViewById(R.id.web2);
-        Button bt_web3 = findViewById(R.id.web3);
-        Button bt_web4 = findViewById(R.id.web4);
-        Button bt_web5 = findViewById(R.id.web5);
-        Button bt_web6 = findViewById(R.id.web6);
+        Button bt_web1 = findViewById(R.id.web1);Button bt_web2 = findViewById(R.id.web2);
+        Button bt_web3 = findViewById(R.id.web3);Button bt_web4 = findViewById(R.id.web4);
+        Button bt_web5 = findViewById(R.id.web5);Button bt_web6 = findViewById(R.id.web6);
         Button bt_web7 = findViewById(R.id.web7);
         final RatingBar ratingBar3 = findViewById(R.id.desc1) ;
         LayerDrawable stars = (LayerDrawable) ratingBar3.getProgressDrawable();
         stars.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars.getDrawable(2).setColorFilter(Color.rgb(255,201,14), PorterDuff.Mode.SRC_ATOP);
         stars.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
-        bt_trucar1.setOnClickListener(this);
-        bt_trucar2.setOnClickListener(this);
-        bt_trucar3.setOnClickListener(this);
-        bt_trucar4.setOnClickListener(this);
-        bt_trucar5.setOnClickListener(this);
-        bt_trucar6.setOnClickListener(this);
+        bt_trucar1.setOnClickListener(this);bt_trucar2.setOnClickListener(this);
+        bt_trucar3.setOnClickListener(this);bt_trucar4.setOnClickListener(this);
+        bt_trucar5.setOnClickListener(this);bt_trucar6.setOnClickListener(this);
         bt_trucar7.setOnClickListener(this);
-        bt_web1.setOnClickListener(this);
-        bt_web2.setOnClickListener(this);
-        bt_web3.setOnClickListener(this);
-        bt_web4.setOnClickListener(this);
-        bt_web5.setOnClickListener(this);
-        bt_web6.setOnClickListener(this);
+        bt_web1.setOnClickListener(this);bt_web2.setOnClickListener(this);
+        bt_web3.setOnClickListener(this);bt_web4.setOnClickListener(this);
+        bt_web5.setOnClickListener(this);bt_web6.setOnClickListener(this);
         bt_web7.setOnClickListener(this);
-        iv1.setOnClickListener(this);
-        iv2.setOnClickListener(this);
-        iv3.setOnClickListener(this);
-        iv4.setOnClickListener(this);
-        iv5.setOnClickListener(this);
-        iv6.setOnClickListener(this);
+        iv1.setOnClickListener(this);iv2.setOnClickListener(this);
+        iv3.setOnClickListener(this);iv4.setOnClickListener(this);
+        iv5.setOnClickListener(this);iv6.setOnClickListener(this);
         iv7.setOnClickListener(this);
+        card1 = findViewById(R.id.primer_h);
+        card2 = findViewById(R.id.segon_h);
+        card3 = findViewById(R.id.tercer_h);
+        card4 = findViewById(R.id.quart_h);
+        card5 = findViewById(R.id.cinque_h);
+        card6 = findViewById(R.id.sise_h);
+        card7 = findViewById(R.id.sete_h);
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        spinner.setOnItemSelectedListener(this);
     }
 
     @Override
@@ -151,5 +154,45 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
     {
         Intent intent = new Intent(Intent.ACTION_DIAL,Uri.parse("tel:"+num));
         startActivity(intent);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        if(position == 0)
+        {
+            card4.setVisibility(View.VISIBLE);
+            card6.setVisibility(View.VISIBLE);
+            card1.setVisibility(View.GONE);
+            card2.setVisibility(View.GONE);
+            card3.setVisibility(View.GONE);
+            card5.setVisibility(View.GONE);
+            card7.setVisibility(View.GONE);
+        }
+        else
+        {
+            if(position ==1)
+            {
+                card4.setVisibility(View.GONE);
+                card6.setVisibility(View.GONE);
+                card1.setVisibility(View.VISIBLE);
+                card2.setVisibility(View.VISIBLE);
+                card3.setVisibility(View.VISIBLE);
+                card5.setVisibility(View.GONE);
+                card7.setVisibility(View.GONE);
+            }
+            else
+            {
+                card4.setVisibility(View.GONE);
+                card6.setVisibility(View.GONE);
+                card1.setVisibility(View.GONE);
+                card2.setVisibility(View.GONE);
+                card3.setVisibility(View.GONE);
+                card5.setVisibility(View.VISIBLE);
+                card7.setVisibility(View.VISIBLE);
+            }
+        }
+    }
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
     }
 }
