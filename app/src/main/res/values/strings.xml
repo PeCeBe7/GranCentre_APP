@@ -8,11 +8,22 @@
     <string name="titol6_hotel">Hotel H</string>
     <string name="titol7_hotel">Hotel Ciutat</string>
     <string name="titol_hotel">Hotels</string>
+    <string name="titol_rest">Restaurants</string>
     <string name="telf">Trucar</string>
     <string name="web">Web</string>
     <string name="rating">Votar</string>
-    <string name="desc1">Establiment amb una ample oferta culinaria europea on predominen antigues tradicion</string>
+    <string name="desc1">Establiment amb una ample oferta culinaria europea on predominen antigues tradicions</string>
+    <string name="desc2">Restaurant amb una gran oferta culinaria de pizzes, a més de carnes i verdures de temporada.</string>
+    <string name="desc3">Establiment que proporciona menjar rapid com són hamburgueses, patates, pollastre arrebosat,...</string>
+    <string name="desc4">Restaurant japonés amb una ample oferta de menjar asiatic contemporani i tradicional al qual no podràs resisir-te. </string>
+    <string name="desc5">La petita fàbrica d\'entrepans al centre de Granollers que t\'ofereix una carta variada,per a reunions d\'amics o de feina. </string>
+    <string name="desc6"> Una nova forma de gaudir el menjar. Una experiència única per viure en companyia. Som especialistes en plats tradicionals italians: pizzes, pastes,...</string>
     <string name="titol1_rest">Viena</string>
+    <string name="titol2_rest">Naguabo</string>
+    <string name="titol3_rest">Burger King</string>
+    <string name="titol4_rest">Atarasii</string>
+    <string name="titol5_rest">Montagu</string>
+    <string name="titol6_rest">Pizzeria 1900</string>
     <string-array name="spinner_array">
         <item>&#9734;</item>
         <item>&#9734;&#9734;</item>
