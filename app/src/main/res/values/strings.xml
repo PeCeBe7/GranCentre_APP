@@ -18,12 +18,20 @@
     <string name="desc4">Restaurant japonés amb una ample oferta de menjar asiatic contemporani i tradicional al qual no podràs resisir-te. </string>
     <string name="desc5">La petita fàbrica d\'entrepans al centre de Granollers que t\'ofereix una carta variada,per a reunions d\'amics o de feina. </string>
     <string name="desc6"> Una nova forma de gaudir el menjar. Una experiència única per viure en companyia. Som especialistes en plats tradicionals italians: pizzes, pastes,...</string>
+    <string name="desc7">Al cor de la ciutat de Granollers, en un edifici emblemàtic neix el nostre restaurant. Espectacular disseny, lluminós, modern, acollidor amb la nostre essència.</string>
+    <string name="desc8">Des del principi busquem un equilibri entre el millor producte, un ambient acollidor i un bon servei logrant obtenir una optima relació qualitat / preu</string>
+    <string name="desc9">En el restaurante marisquería Os Galegos llevamos la cocina gallega tradicional al centro de Granollers.</string>
+    <string name="desc10">Bufet lliure que combina menjar tradicional chinés amb menjar tradicional español</string>
     <string name="titol1_rest">Viena</string>
     <string name="titol2_rest">Naguabo</string>
     <string name="titol3_rest">Burger King</string>
     <string name="titol4_rest">Atarasii</string>
     <string name="titol5_rest">Montagu</string>
     <string name="titol6_rest">Pizzeria 1900</string>
+    <string name="titol7_rest">El Rajol</string>
+    <string name="titol8_rest">Wagaya</string>
+    <string name="titol9_rest">Os Gallegos</string>
+    <string name="titol10_rest">Wok 158</string>
     <string-array name="spinner_array">
         <item>&#9734;</item>
         <item>&#9734;&#9734;</item>

@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".MainHotels">
 
         <TextView
@@ -44,10 +44,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:text="@string/titol1_rest"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="RelativeOverlap" />
 
                 <ImageView
                     android:id="@+id/img_viena"
@@ -59,7 +60,7 @@
                 <TextView
                     android:id="@+id/desc1"
                     android:layout_width="300dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/primer_Rest"
                     android:layout_toEndOf="@id/img_viena"
@@ -72,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:layout_below="@+id/desc1"
-                    android:layout_marginLeft="-50dp"
+                    android:layout_marginStart="-50dp"
                     android:layout_toEndOf="@id/img_viena"
                     android:numStars="5"
                     android:saveEnabled="true"
@@ -105,7 +106,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/primer"
             android:layout_margin="10dp"
-            android:background="@color/cardview_dark_background"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
             <RelativeLayout
@@ -117,7 +117,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:text="@string/titol2_rest"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
@@ -132,7 +132,7 @@
                 <TextView
                     android:id="@+id/desc2"
                     android:layout_width="300dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/segon_Rest"
                     android:layout_toEndOf="@id/img_naguabo"
@@ -145,7 +145,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:layout_below="@+id/desc2"
-                    android:layout_marginLeft="-50dp"
+                    android:layout_marginStart="-50dp"
                     android:layout_toEndOf="@id/img_naguabo"
                     android:numStars="5"
                     android:saveEnabled="true"
@@ -177,7 +177,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/segon"
             android:layout_margin="10dp"
-            android:background="@color/cardview_dark_background"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
             <RelativeLayout
@@ -189,7 +188,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:text="@string/titol3_rest"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
@@ -217,7 +216,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:layout_below="@+id/desc3"
-                    android:layout_marginLeft="-50dp"
+                    android:layout_marginStart="-50dp"
                     android:layout_toEndOf="@id/img_burger"
                     android:numStars="5"
                     android:saveEnabled="true"
@@ -250,7 +249,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tercer"
             android:layout_margin="10dp"
-            android:background="@color/cardview_dark_background"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
             <RelativeLayout
@@ -262,7 +260,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:text="@string/titol4_rest"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
@@ -290,7 +288,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:layout_below="@+id/desc4"
-                    android:layout_marginLeft="-50dp"
+                    android:layout_marginStart="-50dp"
                     android:layout_toEndOf="@id/img_atarasi"
                     android:numStars="5"
                     android:saveEnabled="true"
@@ -322,7 +320,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/quart"
             android:layout_margin="10dp"
-            android:background="@color/cardview_dark_background"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
             <RelativeLayout
@@ -334,7 +331,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:text="@string/titol5_rest"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
@@ -362,7 +359,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:layout_below="@+id/desc5"
-                    android:layout_marginLeft="-50dp"
+                    android:layout_marginStart="-50dp"
                     android:layout_toEndOf="@id/img_montagu"
                     android:numStars="5"
                     android:saveEnabled="true"
@@ -395,7 +392,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/cinque"
             android:layout_margin="10dp"
-            android:background="@color/cardview_dark_background"
             card_view:cardCornerRadius="5dp"
             card_view:cardElevation="2dp">
             <RelativeLayout
@@ -407,7 +403,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:text="@string/titol6_rest"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
@@ -435,7 +431,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:layout_below="@+id/desc6"
-                    android:layout_marginLeft="-50dp"
+                    android:layout_marginStart="-50dp"
                     android:layout_toEndOf="@id/img_pizza"
                     android:numStars="5"
                     android:saveEnabled="true"
@@ -458,6 +454,293 @@
                     android:layout_below="@id/rat6"
                     android:layout_marginTop="-20dp"
                     android:layout_toEndOf="@id/trucar6"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sise"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/sete_Rest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/titol7_rest"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/img_rajol"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@+id/sete_Rest"
+                    android:src="@drawable/rajol" />
+                <TextView
+                    android:id="@+id/desc7"
+                    android:layout_width="300dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sete_Rest"
+                    android:layout_toEndOf="@id/img_rajol"
+                    android:text="@string/desc7"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <RatingBar
+                    android:id="@+id/rat7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/desc7"
+                    android:layout_marginStart="-50dp"
+                    android:layout_toEndOf="@id/img_rajol"
+                    android:numStars="5"
+                    android:saveEnabled="true"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5" />
+                <Button
+                    android:id="@+id/trucar7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat7"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/img_rajol"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat7"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/trucar7"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/vuite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sete"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/vuite_Rest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/titol8_rest"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/img_wagaya"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@+id/vuite_Rest"
+                    android:src="@drawable/wagaya" />
+                <TextView
+                    android:id="@+id/desc8"
+                    android:layout_width="300dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vuite_Rest"
+                    android:layout_toEndOf="@id/img_wagaya"
+                    android:text="@string/desc8"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <RatingBar
+                    android:id="@+id/rat8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/desc8"
+                    android:layout_marginStart="-50dp"
+                    android:layout_toEndOf="@id/img_wagaya"
+                    android:numStars="5"
+                    android:saveEnabled="true"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5" />
+                <Button
+                    android:id="@+id/trucar8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat8"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/img_wagaya"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat8"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/trucar8"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
+            android:id="@+id/nove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vuite"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/nove_Rest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/titol9_rest"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/img_gallegos"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@+id/nove_Rest"
+                    android:src="@drawable/gallegos" />
+                <TextView
+                    android:id="@+id/desc9"
+                    android:layout_width="300dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nove_Rest"
+                    android:layout_toEndOf="@id/img_gallegos"
+                    android:text="@string/desc9"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <RatingBar
+                    android:id="@+id/rat9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/desc9"
+                    android:layout_marginStart="-50dp"
+                    android:layout_toEndOf="@id/img_gallegos"
+                    android:numStars="5"
+                    android:saveEnabled="true"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5" />
+                <Button
+                    android:id="@+id/trucar9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat9"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/img_gallegos"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat9"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/trucar9"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/deue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nove"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/deue_Rest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/titol10_rest"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/img_wok"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@+id/deue_Rest"
+                    android:src="@drawable/wok" />
+                <TextView
+                    android:id="@+id/desc10"
+                    android:layout_width="300dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/deue_Rest"
+                    android:layout_toEndOf="@id/img_wok"
+                    android:text="@string/desc10"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <RatingBar
+                    android:id="@+id/rat10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/desc10"
+                    android:layout_marginStart="-50dp"
+                    android:layout_toEndOf="@id/img_wok"
+                    android:numStars="5"
+                    android:saveEnabled="true"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5" />
+                <Button
+                    android:id="@+id/trucar10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat10"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/img_wok"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat10"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/trucar10"
                     android:text="@string/web"
                     android:background="@color/transparent"/>
             </RelativeLayout>
