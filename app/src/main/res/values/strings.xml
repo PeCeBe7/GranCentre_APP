@@ -23,6 +23,8 @@
     <string name="desc9">En el restaurante marisquería Os Galegos llevamos la cocina gallega tradicional al centro de Granollers.</string>
     <string name="desc10">Bufet lliure que combina menjar tradicional chinés amb menjar tradicional español</string>
     <string name="desc11">Un restaurant amb un servei de qualitat, un espai comfortable on compartir les millor tapes, combinades amb una carta selecta de vins.</string>
+    <string name="desc12">El gust del menjar americà: hamburgueses, costelles... Descobreix la nostra carta i troba el teu restaurant més proper.</string>
+    <string name="desc13">Pots demanar pizzes i menjar a domicili i per emportar. Demana la teva pizza per internet, gaudeix de les promocions online.</string>
     <string name="titol1_rest">Viena</string>
     <string name="titol2_rest">Naguabo</string>
     <string name="titol3_rest">Burger King</string>
@@ -34,9 +36,21 @@
     <string name="titol9_rest">Os Gallegos</string>
     <string name="titol10_rest">Wok 158</string>
     <string name="titol11_rest">Pitapes</string>
+    <string name="titol12_rest">Foster\'s Hollywood</string>
+    <string name="titol13_rest">Telepizza</string>
     <string-array name="spinner_array">
+        <item></item>
         <item>&#9734;&#9734;</item>
         <item>&#9734;&#9734;&#9734;</item>
-        <item>&#9734;&#9734;&#9734;&#9734;</item>s
+        <item>&#9734;&#9734;&#9734;&#9734;</item>
+    </string-array>
+    <string-array name="restaurant_array">
+        <item></item>
+        <item>Italià</item>
+        <item>Japonés</item>
+        <item>Menjar ràpid</item>
+        <item>Tapes</item>
+        <item>Galicia</item>
+        <item>Americà</item>
     </string-array>
 </resources>

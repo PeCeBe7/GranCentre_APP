@@ -16,13 +16,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/titol_rest"
+            android:layout_marginStart="110dp"
             android:textColor="@color/black"
             android:textSize="40sp" />
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:entries="@array/spinner_array"/>
+            android:entries="@array/restaurant_array"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/primer"
@@ -801,6 +802,147 @@
                     android:layout_below="@id/rat11"
                     android:layout_marginTop="-20dp"
                     android:layout_toEndOf="@id/trucar11"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dotze"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/dotze_Rest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/titol12_rest"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/img_fosters"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@+id/dotze_Rest"
+                    android:src="@drawable/fosters" />
+                <TextView
+                    android:id="@+id/desc12"
+                    android:layout_width="300dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dotze_Rest"
+                    android:layout_toEndOf="@id/img_fosters"
+                    android:text="@string/desc12"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <RatingBar
+                    android:id="@+id/rat12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/desc12"
+                    android:layout_marginStart="-50dp"
+                    android:layout_toEndOf="@id/img_fosters"
+                    android:numStars="5"
+                    android:saveEnabled="true"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5" />
+                <Button
+                    android:id="@+id/trucar12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat12"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/img_fosters"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat12"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/trucar12"
+                    android:text="@string/web"
+                    android:background="@color/transparent"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
+            android:id="@+id/tretze"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="2dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tretze_Rest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/titol13_rest"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/img_telepizza"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@+id/tretze_Rest"
+                    android:src="@drawable/telepizza" />
+                <TextView
+                    android:id="@+id/desc13"
+                    android:layout_width="300dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tretze_Rest"
+                    android:layout_toEndOf="@id/img_telepizza"
+                    android:text="@string/desc13"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <RatingBar
+                    android:id="@+id/rat13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/desc13"
+                    android:layout_marginStart="-50dp"
+                    android:layout_toEndOf="@id/img_telepizza"
+                    android:numStars="5"
+                    android:saveEnabled="true"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5" />
+                <Button
+                    android:id="@+id/trucar13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat13"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/img_telepizza"
+                    android:text="@string/telf"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/web13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rat13"
+                    android:layout_marginTop="-20dp"
+                    android:layout_toEndOf="@id/trucar13"
                     android:text="@string/web"
                     android:background="@color/transparent"/>
             </RelativeLayout>

@@ -158,7 +158,7 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        if(position == 0)
+        if(position == 1)
         {
             card4.setVisibility(View.VISIBLE);
             card6.setVisibility(View.VISIBLE);
@@ -170,7 +170,7 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
         }
         else
         {
-            if(position ==1)
+            if(position ==2)
             {
                 card4.setVisibility(View.GONE);
                 card6.setVisibility(View.GONE);
@@ -182,13 +182,17 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
             }
             else
             {
-                card4.setVisibility(View.GONE);
-                card6.setVisibility(View.GONE);
-                card1.setVisibility(View.GONE);
-                card2.setVisibility(View.GONE);
-                card3.setVisibility(View.GONE);
-                card5.setVisibility(View.VISIBLE);
-                card7.setVisibility(View.VISIBLE);
+                if(position == 3)
+                {
+                    card4.setVisibility(View.GONE);
+                    card6.setVisibility(View.GONE);
+                    card1.setVisibility(View.GONE);
+                    card2.setVisibility(View.GONE);
+                    card3.setVisibility(View.GONE);
+                    card5.setVisibility(View.VISIBLE);
+                    card7.setVisibility(View.VISIBLE);
+                }
+
             }
         }
     }
