@@ -53,7 +53,7 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
         Button bt_web3 = findViewById(R.id.web3);Button bt_web4 = findViewById(R.id.web4);
         Button bt_web5 = findViewById(R.id.web5);Button bt_web6 = findViewById(R.id.web6);
         Button bt_web7 = findViewById(R.id.web7);
-        final RatingBar ratingBar3 = findViewById(R.id.desc1) ;
+        final RatingBar ratingBar3 = findViewById(R.id.hrat1) ;
         LayerDrawable stars = (LayerDrawable) ratingBar3.getProgressDrawable();
         stars.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars.getDrawable(2).setColorFilter(Color.rgb(255,201,14), PorterDuff.Mode.SRC_ATOP);
