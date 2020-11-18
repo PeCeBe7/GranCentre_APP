@@ -9,20 +9,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@color/black"
         tools:context=".MainHotels">
 
         <TextView
             android:id="@+id/titol"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/titol_hotel"
-            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textColor="@color/white"
             android:textSize="40sp" />
 
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
+            android:background="@color/white"
             android:entries="@array/spinner_array" />
 
         <androidx.cardview.widget.CardView
@@ -38,7 +41,7 @@
                     android:id="@+id/primer_Hotel"
                     style="@style/titleStyle"
                     android:layout_marginEnd="70dp"
-                    android:text="@string/titol1_hotel" />
+                    android:text="@string/titol1_hotel"/>
 
                 <ImageView
                     android:id="@+id/img_fonda"

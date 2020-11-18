@@ -17,123 +17,65 @@ import android.widget.RatingBar;
 import android.widget.Spinner;
 
 
-public class MainRestaurant extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+public class MainRestaurant extends AppCompatActivity  {
 
-    CardView card1;
-    CardView card2;
-    CardView card3;
-    CardView card4;
-    CardView card5;
-    CardView card6;
-    CardView card7;
-    CardView card8;
-    CardView card9;
-    CardView card10;
-    CardView card11;
-    CardView card12;
-    CardView card13;
-
+    CardView card1,card2,card3,card4,card5,card6,card7,card8,card9,card10,card11,card12,card13;
+    //implements AdapterView.OnItemSelectedListener, View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_restaurant);
-        card1 = findViewById(R.id.primer);
-        card2 = findViewById(R.id.segon);
-        card3 = findViewById(R.id.tercer);
-        card4 = findViewById(R.id.quart);
-        card5 = findViewById(R.id.cinque);
-        card6 = findViewById(R.id.sise);
-        card7 = findViewById(R.id.sete);
-        card8 = findViewById(R.id.vuite);
-        card9 = findViewById(R.id.nove);
-        card10 = findViewById(R.id.deue);
-        card11 = findViewById(R.id.onze);
-        card12 = findViewById(R.id.dotze);
+        /*card1 = findViewById(R.id.primer);card2 = findViewById(R.id.segon);
+        card3 = findViewById(R.id.tercer);card4 = findViewById(R.id.quart);
+        card5 = findViewById(R.id.cinque);card6 = findViewById(R.id.sise);
+        card7 = findViewById(R.id.sete);card8 = findViewById(R.id.vuite);
+        card9 = findViewById(R.id.nove);card10 = findViewById(R.id.deue);
+        card11 = findViewById(R.id.onze);card12 = findViewById(R.id.dotze);
         card13 = findViewById(R.id.tretze);
-        ImageView iv1 = findViewById(R.id.img_viena);
-        ImageView iv2 = findViewById(R.id.img_naguabo);
-        ImageView iv3 = findViewById(R.id.img_burger);
-        ImageView iv4 = findViewById(R.id.img_atarasi);
-        ImageView iv5 = findViewById(R.id.img_montagu);
-        ImageView iv6 = findViewById(R.id.img_pizza);
-        ImageView iv7 = findViewById(R.id.img_rajol);
-        ImageView iv8 = findViewById(R.id.img_wagaya);
-        ImageView iv9 = findViewById(R.id.img_gallegos);
-        ImageView iv10 = findViewById(R.id.img_wok);
-        ImageView iv11 = findViewById(R.id.img_pitapes);
-        ImageView iv12 = findViewById(R.id.img_fosters);
+        ImageView iv1 = findViewById(R.id.img_viena),iv2 = findViewById(R.id.img_naguabo),iv3 = findViewById(R.id.img_burger);
+        ImageView iv4 = findViewById(R.id.img_atarasi),iv5 = findViewById(R.id.img_montagu),iv6 = findViewById(R.id.img_pizza);
+        ImageView iv7 = findViewById(R.id.img_rajol),iv8 = findViewById(R.id.img_wagaya),iv9 = findViewById(R.id.img_gallegos);
+        ImageView iv10 = findViewById(R.id.img_wok),iv11 = findViewById(R.id.img_pitapes),iv12 = findViewById(R.id.img_fosters);
         ImageView iv13 = findViewById(R.id.img_telepizza);
-        Button bt_trucar1 = findViewById(R.id.trucar1);
-        Button bt_trucar2 = findViewById(R.id.trucar2);
-        Button bt_trucar3 = findViewById(R.id.trucar3);
-        Button bt_trucar4 = findViewById(R.id.trucar4);
-        Button bt_trucar5 = findViewById(R.id.trucar5);
-        Button bt_trucar6 = findViewById(R.id.trucar6);
-        Button bt_trucar7 = findViewById(R.id.trucar7);
-        Button bt_trucar8 = findViewById(R.id.trucar8);
-        Button bt_trucar9 = findViewById(R.id.trucar9);
-        Button bt_trucar10 = findViewById(R.id.trucar10);
-        Button bt_trucar11 = findViewById(R.id.trucar11);
-        Button bt_trucar12 = findViewById(R.id.trucar12);
+        Button bt_trucar1 = findViewById(R.id.trucar1),bt_trucar2 = findViewById(R.id.trucar2), bt_trucar3 = findViewById(R.id.trucar3);
+        Button bt_trucar4 = findViewById(R.id.trucar4),bt_trucar5 = findViewById(R.id.trucar5),bt_trucar6 = findViewById(R.id.trucar6);
+        Button bt_trucar7 = findViewById(R.id.trucar7);Button bt_trucar8 = findViewById(R.id.trucar8), bt_trucar9 = findViewById(R.id.trucar9);
+        Button bt_trucar10 = findViewById(R.id.trucar10),bt_trucar11 = findViewById(R.id.trucar11), bt_trucar12 = findViewById(R.id.trucar12);
         Button bt_trucar13 = findViewById(R.id.trucar13);
-        Button bt_web1 = findViewById(R.id.web1);
-        Button bt_web2 = findViewById(R.id.web2);
-        Button bt_web3 = findViewById(R.id.web3);
-        Button bt_web4 = findViewById(R.id.web4);
-        Button bt_web5 = findViewById(R.id.web5);
-        Button bt_web6 = findViewById(R.id.web6);
-        Button bt_web7 = findViewById(R.id.web7);
-        Button bt_web8 = findViewById(R.id.web8);
-        Button bt_web9 = findViewById(R.id.web9);
-        Button bt_web10 = findViewById(R.id.web10);
-        Button bt_web11 = findViewById(R.id.web11);
-        Button bt_web12 = findViewById(R.id.web12);
+        Button bt_web1 = findViewById(R.id.web1);Button bt_web2 = findViewById(R.id.web2);
+        Button bt_web3 = findViewById(R.id.web3);Button bt_web4 = findViewById(R.id.web4);
+        Button bt_web5 = findViewById(R.id.web5);Button bt_web6 = findViewById(R.id.web6);
+        Button bt_web7 = findViewById(R.id.web7);Button bt_web8 = findViewById(R.id.web8);
+        Button bt_web9 = findViewById(R.id.web9);Button bt_web10 = findViewById(R.id.web10);
+        Button bt_web11 = findViewById(R.id.web11);Button bt_web12 = findViewById(R.id.web12);
         Button bt_web13 = findViewById(R.id.web13);
         pintarEstrellas();
-        bt_trucar1.setOnClickListener(this);
-        bt_trucar2.setOnClickListener(this);
-        bt_trucar3.setOnClickListener(this);
-        bt_trucar4.setOnClickListener(this);
-        bt_trucar5.setOnClickListener(this);
-        bt_trucar6.setOnClickListener(this);
-        bt_trucar7.setOnClickListener(this);
-        bt_trucar8.setOnClickListener(this);
-        bt_trucar9.setOnClickListener(this);
-        bt_trucar10.setOnClickListener(this);
-        bt_trucar11.setOnClickListener(this);
-        bt_trucar12.setOnClickListener(this);
+        bt_trucar1.setOnClickListener(this);bt_trucar2.setOnClickListener(this);
+        bt_trucar3.setOnClickListener(this);bt_trucar4.setOnClickListener(this);
+        bt_trucar5.setOnClickListener(this);bt_trucar6.setOnClickListener(this);
+        bt_trucar7.setOnClickListener(this);bt_trucar8.setOnClickListener(this);
+        bt_trucar9.setOnClickListener(this);bt_trucar10.setOnClickListener(this);
+        bt_trucar11.setOnClickListener(this);bt_trucar12.setOnClickListener(this);
         bt_trucar13.setOnClickListener(this);
-        bt_web1.setOnClickListener(this);
-        bt_web2.setOnClickListener(this);
-        bt_web3.setOnClickListener(this);
-        bt_web4.setOnClickListener(this);
-        bt_web5.setOnClickListener(this);
-        bt_web6.setOnClickListener(this);
-        bt_web7.setOnClickListener(this);
-        bt_web8.setOnClickListener(this);
-        bt_web9.setOnClickListener(this);
-        bt_web10.setOnClickListener(this);
-        bt_web11.setOnClickListener(this);
-        bt_web12.setOnClickListener(this);
+        bt_web1.setOnClickListener(this);bt_web2.setOnClickListener(this);
+        bt_web3.setOnClickListener(this);bt_web4.setOnClickListener(this);
+        bt_web5.setOnClickListener(this);bt_web6.setOnClickListener(this);
+        bt_web7.setOnClickListener(this);bt_web8.setOnClickListener(this);
+        bt_web9.setOnClickListener(this);bt_web10.setOnClickListener(this);
+        bt_web11.setOnClickListener(this);bt_web12.setOnClickListener(this);
         bt_web13.setOnClickListener(this);
-        iv1.setOnClickListener(this);
-        iv2.setOnClickListener(this);
-        iv3.setOnClickListener(this);
-        iv4.setOnClickListener(this);
-        iv5.setOnClickListener(this);
-        iv6.setOnClickListener(this);
-        iv7.setOnClickListener(this);
-        iv8.setOnClickListener(this);
-        iv9.setOnClickListener(this);
-        iv10.setOnClickListener(this);
-        iv11.setOnClickListener(this);
-        iv12.setOnClickListener(this);
+        iv1.setOnClickListener(this);iv2.setOnClickListener(this);
+        iv3.setOnClickListener(this);iv4.setOnClickListener(this);
+        iv5.setOnClickListener(this);iv6.setOnClickListener(this);
+        iv7.setOnClickListener(this);iv8.setOnClickListener(this);
+        iv9.setOnClickListener(this);iv10.setOnClickListener(this);
+        iv11.setOnClickListener(this);iv12.setOnClickListener(this);
         iv13.setOnClickListener(this);
         Spinner spinner = findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(this);
+        spinner.setOnItemSelectedListener(this);*/
     }
 
-    private void pintarEstrellas() {
+    /*private void pintarEstrellas() {
         final RatingBar ratingBar1 = findViewById(R.id.rat1);
         final RatingBar ratingBar2 = findViewById(R.id.rat2);
         final RatingBar ratingBar3 = findViewById(R.id.rat3);
@@ -160,45 +102,19 @@ public class MainRestaurant extends AppCompatActivity implements AdapterView.OnI
         LayerDrawable stars11 = (LayerDrawable) ratingBar11.getProgressDrawable();
         LayerDrawable stars12 = (LayerDrawable) ratingBar12.getProgressDrawable();
         LayerDrawable stars13 = (LayerDrawable) ratingBar13.getProgressDrawable();
-        stars1.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars1.getDrawable(2).setColorFilter(Color.rgb(255, 201, 14), PorterDuff.Mode.SRC_ATOP);
-        stars1.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
-        stars2.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars2.getDrawable(2).setColorFilter(Color.rgb(255, 201, 14), PorterDuff.Mode.SRC_ATOP);
-        stars2.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
-        stars3.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars3.getDrawable(2).setColorFilter(Color.rgb(255, 201, 14), PorterDuff.Mode.SRC_ATOP);
-        stars3.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
-        stars4.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars4.getDrawable(2).setColorFilter(Color.rgb(255, 201, 14), PorterDuff.Mode.SRC_ATOP);
-        stars4.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
-        stars5.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars5.getDrawable(2).setColorFilter(Color.rgb(255, 201, 14), PorterDuff.Mode.SRC_ATOP);
-        stars5.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
-        stars6.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars6.getDrawable(2).setColorFilter(Color.rgb(255, 201, 14), PorterDuff.Mode.SRC_ATOP);
-        stars6.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
-        stars7.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars7.getDrawable(2).setColorFilter(Color.rgb(255, 201, 14), PorterDuff.Mode.SRC_ATOP);
-        stars7.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
-        stars8.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars8.getDrawable(2).setColorFilter(Color.rgb(255, 201, 14), PorterDuff.Mode.SRC_ATOP);
-        stars8.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
-        stars9.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars9.getDrawable(2).setColorFilter(Color.rgb(255, 201, 14), PorterDuff.Mode.SRC_ATOP);
-        stars9.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
-        stars10.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars10.getDrawable(2).setColorFilter(Color.rgb(255, 201, 14), PorterDuff.Mode.SRC_ATOP);
-        stars10.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
-        stars11.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars11.getDrawable(2).setColorFilter(Color.rgb(255, 201, 14), PorterDuff.Mode.SRC_ATOP);
-        stars11.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
-        stars12.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars12.getDrawable(2).setColorFilter(Color.rgb(255, 201, 14), PorterDuff.Mode.SRC_ATOP);
-        stars12.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
-        stars13.getDrawable(0).setColorFilter(Color.LTGRAY, PorterDuff.Mode.SRC_ATOP);
         stars13.getDrawable(2).setColorFilter(Color.rgb(255, 201, 14), PorterDuff.Mode.SRC_ATOP);
-        stars13.getDrawable(1).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
     }
 
     @Override
@@ -469,5 +385,5 @@ public class MainRestaurant extends AppCompatActivity implements AdapterView.OnI
     private void callHotel(String num) {
         Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + num));
         startActivity(intent);
-    }
+    }*/
 }

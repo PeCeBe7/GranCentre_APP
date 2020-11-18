@@ -77,7 +77,7 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
         card5 = findViewById(R.id.cinque_h);
         card6 = findViewById(R.id.sise_h);
         card7 = findViewById(R.id.sete_h);
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        Spinner spinner = findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener(this);
     }
 
