@@ -1,30 +1,23 @@
 package com.example.grancentreapp;
 
-import android.annotation.SuppressLint;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.LayerDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RatingBar;
-import android.widget.Spinner;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
-public class MainHotels extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
+public class MainHotel extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener{
 
     CardView card1,card2,card3,card4,card5,card6,card7;
-    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_hotels);
+        setContentView(R.layout.activity_main_hotel);
         /*ImageView iv1 = findViewById(R.id.img_fonda);ImageView iv2 = findViewById(R.id.img_granollers);
         ImageView iv3 = findViewById(R.id.img_iris);ImageView iv4 = findViewById(R.id.img_bib);
         ImageView iv5 = findViewById(R.id.img_atenea);ImageView iv6 = findViewById(R.id.img_h);
@@ -66,7 +59,7 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
     }
 
     @Override
-    public void onClick(final View v) {
+    public void onClick(View v) {
         if(v instanceof Button)
         {
             Button bt = (Button) v;
@@ -142,6 +135,7 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
         if(position == 1)
         {
             card4.setVisibility(View.VISIBLE);
@@ -180,7 +174,9 @@ public class MainHotels extends AppCompatActivity implements View.OnClickListene
             }
         }
     }
+
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
