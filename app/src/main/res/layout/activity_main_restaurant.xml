@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,10 +7,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
         android:background="@color/black"
+        android:orientation="vertical"
         tools:context=".MainHotels">
+
         <TextView
             android:id="@+id/titol"
             android:layout_width="match_parent"
@@ -20,77 +20,71 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="40sp" />
+
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:entries="@array/restaurant_array"
-            android:background="@color/white"/>
+            android:background="@color/white"
+            android:entries="@array/restaurant_array" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/primer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/img_viena"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
+                    style="@style/imgStyle"
                     android:src="@drawable/viena" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="20dp"
-                            android:text="@string/titol1_rest"/>
+                            style="@style/titleStyle"
+                            android:text="@string/titol1_rest" />
+
                         <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
                             android:id="@+id/desc1"
-                            android:text="@string/desc1"
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="15sp"
-                            android:layout_marginStart="10dp"/>
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc1" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <RatingBar
                             android:id="@+id/rat1"
-                            style="@style/ratingStyle"/>
+                            style="@style/ratingStyle" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp">
+
                             <Button
                                 android:id="@+id/trucar1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/telf"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
                             <Button
                                 android:id="@+id/web1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/web"
-                                android:layout_marginStart="10dp"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -99,851 +93,767 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/segon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
-            >
+            style="@style/cardViewStyle">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/img_naguabo"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
+                    style="@style/imgStyle"
                     android:src="@drawable/naguabo" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="20dp"
-                            android:text="@string/titol2_rest"/>
+                            style="@style/titleStyle"
+                            android:text="@string/titol2_rest" />
+
                         <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
                             android:id="@+id/desc2"
-                            android:text="@string/desc2"
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="15sp"/>
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc2" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <RatingBar
                             android:id="@+id/rat2"
-                            style="@style/ratingStyle"/>
+                            style="@style/ratingStyle" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp">
+
                             <Button
                                 android:id="@+id/trucar2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/telf"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
                             <Button
                                 android:id="@+id/web2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/web"
-                                android:layout_marginStart="10dp"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/tercer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/img_burger"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
+                    style="@style/imgStyle"
                     android:src="@drawable/burger" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="20dp"
-                            android:text="@string/titol3_rest"/>
+                            style="@style/titleStyle"
+                            android:text="@string/titol3_rest" />
+
                         <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
                             android:id="@+id/desc3"
-                            android:text="@string/desc3"
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="15sp"/>
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc3" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <RatingBar
                             android:id="@+id/rat3"
-                            style="@style/ratingStyle"/>
+                            style="@style/ratingStyle" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp">
+
                             <Button
                                 android:id="@+id/trucar3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/telf"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
                             <Button
                                 android:id="@+id/web3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/web"
-                                android:layout_marginStart="10dp"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/quart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/img_atarasi"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
+                    style="@style/imgStyle"
                     android:src="@drawable/atarasii" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="20dp"
-                            android:text="@string/titol4_rest"/>
+                            style="@style/titleStyle"
+                            android:text="@string/titol4_rest" />
+
                         <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
                             android:id="@+id/desc4"
-                            android:text="@string/desc4"
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="15sp"/>
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc4" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <RatingBar
                             android:id="@+id/rat4"
                             style="@style/ratingStyle"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp">
+
                             <Button
                                 android:id="@+id/trucar4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/telf"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
                             <Button
                                 android:id="@+id/web4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/web"
-                                android:layout_marginStart="10dp"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cinque"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/img_montagu"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
+                    style="@style/imgStyle"
                     android:src="@drawable/montagu" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="20sp"
-                            android:text="@string/titol5_rest"/>
+                            style="@style/titleStyle"
+                            android:text="@string/titol5_rest" />
+
                         <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
                             android:id="@+id/desc5"
-                            android:text="@string/desc5"
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="15sp"/>
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc5" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <RatingBar
                             android:id="@+id/rat5"
                             style="@style/ratingStyle"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp">
+
                             <Button
                                 android:id="@+id/trucar5"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/telf"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
                             <Button
                                 android:id="@+id/web5"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/web"
-                                android:layout_marginStart="10dp"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/sise"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/img_pizza"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
+                    style="@style/imgStyle"
                     android:src="@drawable/pizza1900" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="20sp"
-                            android:text="@string/titol6_rest"/>
+                            style="@style/titleStyle"
+                            android:text="@string/titol6_rest" />
+
                         <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
                             android:id="@+id/desc6"
-                            android:text="@string/desc6"
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="15sp"/>
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc6" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <RatingBar
                             android:id="@+id/rat6"
                             style="@style/ratingStyle"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp">
+
                             <Button
                                 android:id="@+id/trucar6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/telf"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
                             <Button
                                 android:id="@+id/web6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/web"
-                                android:layout_marginStart="10dp"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/sete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/img_rajol"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
+                    style="@style/imgStyle"
                     android:src="@drawable/rajol" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="20sp"
-                            android:text="@string/titol7_rest"/>
+                            style="@style/titleStyle"
+                            android:text="@string/titol7_rest" />
+
                         <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
                             android:id="@+id/desc7"
-                            android:text="@string/desc7"
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="15sp"/>
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc7" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <RatingBar
                             android:id="@+id/rat7"
                             style="@style/ratingStyle"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp">
+
                             <Button
                                 android:id="@+id/trucar7"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/telf"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
                             <Button
                                 android:id="@+id/web7"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/web"
-                                android:layout_marginStart="10dp"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/vuite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/img_wagaya"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
+                    style="@style/imgStyle"
                     android:src="@drawable/wagaya" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="20sp"
-                            android:text="@string/titol8_rest"/>
+                            style="@style/titleStyle"
+                            android:text="@string/titol8_rest" />
+
                         <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
                             android:id="@+id/desc8"
-                            android:text="@string/desc8"
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="15sp"/>
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc8" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <RatingBar
                             android:id="@+id/rat8"
                             style="@style/ratingStyle"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp">
+
                             <Button
                                 android:id="@+id/trucar8"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/telf"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
                             <Button
                                 android:id="@+id/web8"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/web"
-                                android:layout_marginStart="10dp"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/nove"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/img_gallegos"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
+                    style="@style/imgStyle"
                     android:src="@drawable/gallegos" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="20sp"
-                            android:text="@string/titol9_rest"/>
+                            style="@style/titleStyle"
+                            android:text="@string/titol9_rest" />
+
                         <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
                             android:id="@+id/desc9"
-                            android:text="@string/desc9"
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="15sp"/>
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc9" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <RatingBar
                             android:id="@+id/rat9"
                             style="@style/ratingStyle"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp">
+
                             <Button
                                 android:id="@+id/trucar9"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/telf"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
                             <Button
                                 android:id="@+id/web9"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/web"
-                                android:layout_marginStart="10dp"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/deue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/img_wok"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
+                    style="@style/imgStyle"
                     android:src="@drawable/gallegos" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="20sp"
-                            android:text="@string/titol10_rest"/>
+                            style="@style/titleStyle"
+                            android:text="@string/titol10_rest" />
+
                         <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
                             android:id="@+id/desc10"
-                            android:text="@string/desc10"
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="15sp"/>
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc10" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <RatingBar
                             android:id="@+id/rat10"
                             style="@style/ratingStyle"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp">
+
                             <Button
                                 android:id="@+id/trucar10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/telf"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
                             <Button
                                 android:id="@+id/web10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/web"
-                                android:layout_marginStart="10dp"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/onze"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/img_pitapes"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
+                    style="@style/imgStyle"
                     android:src="@drawable/pitapes" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="20sp"
-                            android:text="@string/titol11_rest"/>
+                            style="@style/titleStyle"
+                            android:text="@string/titol11_rest" />
+
                         <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
                             android:id="@+id/desc11"
-                            android:text="@string/desc11"
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="15sp"/>
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc11" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <RatingBar
                             android:id="@+id/rat11"
                             style="@style/ratingStyle"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp">
+
                             <Button
                                 android:id="@+id/trucar11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/telf"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
                             <Button
                                 android:id="@+id/web11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/web"
-                                android:layout_marginStart="10dp"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/dotze"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/img_fosters"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
+                    style="@style/imgStyle"
                     android:src="@drawable/fosters" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="20sp"
-                            android:text="@string/titol12_rest"/>
+                            style="@style/titleStyle"
+                            android:text="@string/titol12_rest" />
+
                         <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
                             android:id="@+id/desc12"
-                            android:text="@string/desc12"
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="15sp"/>
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc12" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <RatingBar
                             android:id="@+id/rat12"
                             style="@style/ratingStyle"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp">
+
                             <Button
                                 android:id="@+id/trucar12"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/telf"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
                             <Button
                                 android:id="@+id/web12"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/web"
-                                android:layout_marginStart="10dp"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-        </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:id="@+id/tretze"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/img_telepizza"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
+                    style="@style/imgStyle"
                     android:src="@drawable/telepizza" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white">
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textSize="20sp"
-                            android:text="@string/titol13_rest"/>
+                            style="@style/titleStyle"
+                            android:text="@string/titol13_rest" />
+
                         <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
                             android:id="@+id/desc13"
-                            android:text="@string/desc12"
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="15sp"/>
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc12" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <RatingBar
                             android:id="@+id/rat13"
                             style="@style/ratingStyle"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp">
+
                             <Button
                                 android:id="@+id/trucar13"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/telf"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
                             <Button
                                 android:id="@+id/web13"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/web"
-                                android:layout_marginStart="10dp"
-                                android:layout_gravity="center"
-                                android:background="@color/transparent"/>
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>

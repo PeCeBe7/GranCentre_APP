@@ -13,7 +13,6 @@
         <activity android:name=".MainRestaurant" />
         <activity android:name=".MainWeather" />
         <activity android:name=".MainMovies" />
-        <activity android:name=".MainHotels" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

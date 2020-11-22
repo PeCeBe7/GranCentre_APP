@@ -17,65 +17,97 @@ import android.widget.RatingBar;
 import android.widget.Spinner;
 
 
-public class MainRestaurant extends AppCompatActivity  {
+public class MainRestaurant extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
-    CardView card1,card2,card3,card4,card5,card6,card7,card8,card9,card10,card11,card12,card13;
+    CardView card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13;
+
     //implements AdapterView.OnItemSelectedListener, View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_restaurant);
-        /*card1 = findViewById(R.id.primer);card2 = findViewById(R.id.segon);
-        card3 = findViewById(R.id.tercer);card4 = findViewById(R.id.quart);
-        card5 = findViewById(R.id.cinque);card6 = findViewById(R.id.sise);
-        card7 = findViewById(R.id.sete);card8 = findViewById(R.id.vuite);
-        card9 = findViewById(R.id.nove);card10 = findViewById(R.id.deue);
-        card11 = findViewById(R.id.onze);card12 = findViewById(R.id.dotze);
+        card1 = findViewById(R.id.primer);
+        card2 = findViewById(R.id.segon);
+        card3 = findViewById(R.id.tercer);
+        card4 = findViewById(R.id.quart);
+        card5 = findViewById(R.id.cinque);
+        card6 = findViewById(R.id.sise);
+        card7 = findViewById(R.id.sete);
+        card8 = findViewById(R.id.vuite);
+        card9 = findViewById(R.id.nove);
+        card10 = findViewById(R.id.deue);
+        card11 = findViewById(R.id.onze);
+        card12 = findViewById(R.id.dotze);
         card13 = findViewById(R.id.tretze);
-        ImageView iv1 = findViewById(R.id.img_viena),iv2 = findViewById(R.id.img_naguabo),iv3 = findViewById(R.id.img_burger);
-        ImageView iv4 = findViewById(R.id.img_atarasi),iv5 = findViewById(R.id.img_montagu),iv6 = findViewById(R.id.img_pizza);
-        ImageView iv7 = findViewById(R.id.img_rajol),iv8 = findViewById(R.id.img_wagaya),iv9 = findViewById(R.id.img_gallegos);
-        ImageView iv10 = findViewById(R.id.img_wok),iv11 = findViewById(R.id.img_pitapes),iv12 = findViewById(R.id.img_fosters);
+        ImageView iv1 = findViewById(R.id.img_viena), iv2 = findViewById(R.id.img_naguabo), iv3 = findViewById(R.id.img_burger);
+        ImageView iv4 = findViewById(R.id.img_atarasi), iv5 = findViewById(R.id.img_montagu), iv6 = findViewById(R.id.img_pizza);
+        ImageView iv7 = findViewById(R.id.img_rajol), iv8 = findViewById(R.id.img_wagaya), iv9 = findViewById(R.id.img_gallegos);
+        ImageView iv10 = findViewById(R.id.img_wok), iv11 = findViewById(R.id.img_pitapes), iv12 = findViewById(R.id.img_fosters);
         ImageView iv13 = findViewById(R.id.img_telepizza);
-        Button bt_trucar1 = findViewById(R.id.trucar1),bt_trucar2 = findViewById(R.id.trucar2), bt_trucar3 = findViewById(R.id.trucar3);
-        Button bt_trucar4 = findViewById(R.id.trucar4),bt_trucar5 = findViewById(R.id.trucar5),bt_trucar6 = findViewById(R.id.trucar6);
-        Button bt_trucar7 = findViewById(R.id.trucar7);Button bt_trucar8 = findViewById(R.id.trucar8), bt_trucar9 = findViewById(R.id.trucar9);
-        Button bt_trucar10 = findViewById(R.id.trucar10),bt_trucar11 = findViewById(R.id.trucar11), bt_trucar12 = findViewById(R.id.trucar12);
+        Button bt_trucar1 = findViewById(R.id.trucar1), bt_trucar2 = findViewById(R.id.trucar2), bt_trucar3 = findViewById(R.id.trucar3);
+        Button bt_trucar4 = findViewById(R.id.trucar4), bt_trucar5 = findViewById(R.id.trucar5), bt_trucar6 = findViewById(R.id.trucar6);
+        Button bt_trucar7 = findViewById(R.id.trucar7);
+        Button bt_trucar8 = findViewById(R.id.trucar8), bt_trucar9 = findViewById(R.id.trucar9);
+        Button bt_trucar10 = findViewById(R.id.trucar10), bt_trucar11 = findViewById(R.id.trucar11), bt_trucar12 = findViewById(R.id.trucar12);
         Button bt_trucar13 = findViewById(R.id.trucar13);
-        Button bt_web1 = findViewById(R.id.web1);Button bt_web2 = findViewById(R.id.web2);
-        Button bt_web3 = findViewById(R.id.web3);Button bt_web4 = findViewById(R.id.web4);
-        Button bt_web5 = findViewById(R.id.web5);Button bt_web6 = findViewById(R.id.web6);
-        Button bt_web7 = findViewById(R.id.web7);Button bt_web8 = findViewById(R.id.web8);
-        Button bt_web9 = findViewById(R.id.web9);Button bt_web10 = findViewById(R.id.web10);
-        Button bt_web11 = findViewById(R.id.web11);Button bt_web12 = findViewById(R.id.web12);
+        Button bt_web1 = findViewById(R.id.web1);
+        Button bt_web2 = findViewById(R.id.web2);
+        Button bt_web3 = findViewById(R.id.web3);
+        Button bt_web4 = findViewById(R.id.web4);
+        Button bt_web5 = findViewById(R.id.web5);
+        Button bt_web6 = findViewById(R.id.web6);
+        Button bt_web7 = findViewById(R.id.web7);
+        Button bt_web8 = findViewById(R.id.web8);
+        Button bt_web9 = findViewById(R.id.web9);
+        Button bt_web10 = findViewById(R.id.web10);
+        Button bt_web11 = findViewById(R.id.web11);
+        Button bt_web12 = findViewById(R.id.web12);
         Button bt_web13 = findViewById(R.id.web13);
         pintarEstrellas();
-        bt_trucar1.setOnClickListener(this);bt_trucar2.setOnClickListener(this);
-        bt_trucar3.setOnClickListener(this);bt_trucar4.setOnClickListener(this);
-        bt_trucar5.setOnClickListener(this);bt_trucar6.setOnClickListener(this);
-        bt_trucar7.setOnClickListener(this);bt_trucar8.setOnClickListener(this);
-        bt_trucar9.setOnClickListener(this);bt_trucar10.setOnClickListener(this);
-        bt_trucar11.setOnClickListener(this);bt_trucar12.setOnClickListener(this);
+        bt_trucar1.setOnClickListener(this);
+        bt_trucar2.setOnClickListener(this);
+        bt_trucar3.setOnClickListener(this);
+        bt_trucar4.setOnClickListener(this);
+        bt_trucar5.setOnClickListener(this);
+        bt_trucar6.setOnClickListener(this);
+        bt_trucar7.setOnClickListener(this);
+        bt_trucar8.setOnClickListener(this);
+        bt_trucar9.setOnClickListener(this);
+        bt_trucar10.setOnClickListener(this);
+        bt_trucar11.setOnClickListener(this);
+        bt_trucar12.setOnClickListener(this);
         bt_trucar13.setOnClickListener(this);
-        bt_web1.setOnClickListener(this);bt_web2.setOnClickListener(this);
-        bt_web3.setOnClickListener(this);bt_web4.setOnClickListener(this);
-        bt_web5.setOnClickListener(this);bt_web6.setOnClickListener(this);
-        bt_web7.setOnClickListener(this);bt_web8.setOnClickListener(this);
-        bt_web9.setOnClickListener(this);bt_web10.setOnClickListener(this);
-        bt_web11.setOnClickListener(this);bt_web12.setOnClickListener(this);
+        bt_web1.setOnClickListener(this);
+        bt_web2.setOnClickListener(this);
+        bt_web3.setOnClickListener(this);
+        bt_web4.setOnClickListener(this);
+        bt_web5.setOnClickListener(this);
+        bt_web6.setOnClickListener(this);
+        bt_web7.setOnClickListener(this);
+        bt_web8.setOnClickListener(this);
+        bt_web9.setOnClickListener(this);
+        bt_web10.setOnClickListener(this);
+        bt_web11.setOnClickListener(this);
+        bt_web12.setOnClickListener(this);
         bt_web13.setOnClickListener(this);
-        iv1.setOnClickListener(this);iv2.setOnClickListener(this);
-        iv3.setOnClickListener(this);iv4.setOnClickListener(this);
-        iv5.setOnClickListener(this);iv6.setOnClickListener(this);
-        iv7.setOnClickListener(this);iv8.setOnClickListener(this);
-        iv9.setOnClickListener(this);iv10.setOnClickListener(this);
-        iv11.setOnClickListener(this);iv12.setOnClickListener(this);
+        iv1.setOnClickListener(this);
+        iv2.setOnClickListener(this);
+        iv3.setOnClickListener(this);
+        iv4.setOnClickListener(this);
+        iv5.setOnClickListener(this);
+        iv6.setOnClickListener(this);
+        iv7.setOnClickListener(this);
+        iv8.setOnClickListener(this);
+        iv9.setOnClickListener(this);
+        iv10.setOnClickListener(this);
+        iv11.setOnClickListener(this);
+        iv12.setOnClickListener(this);
         iv13.setOnClickListener(this);
         Spinner spinner = findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(this);*/
+        spinner.setOnItemSelectedListener(this);
     }
 
-    /*private void pintarEstrellas() {
+    private void pintarEstrellas() {
         final RatingBar ratingBar1 = findViewById(R.id.rat1);
         final RatingBar ratingBar2 = findViewById(R.id.rat2);
         final RatingBar ratingBar3 = findViewById(R.id.rat3);
@@ -133,8 +165,7 @@ public class MainRestaurant extends AppCompatActivity  {
             card11.setVisibility(View.VISIBLE);
             card12.setVisibility(View.VISIBLE);
             card13.setVisibility(View.VISIBLE);
-        }
-        if (position == 1) {
+        } else if (position == 1) {
             card1.setVisibility(View.GONE);
             card2.setVisibility(View.VISIBLE);
             card3.setVisibility(View.GONE);
@@ -148,89 +179,77 @@ public class MainRestaurant extends AppCompatActivity  {
             card11.setVisibility(View.GONE);
             card12.setVisibility(View.GONE);
             card13.setVisibility(View.VISIBLE);
-        } else {
-            if (position == 2) {
-                card1.setVisibility(View.GONE);
-                card2.setVisibility(View.GONE);
-                card3.setVisibility(View.GONE);
-                card4.setVisibility(View.VISIBLE);
-                card5.setVisibility(View.GONE);
-                card6.setVisibility(View.GONE);
-                card7.setVisibility(View.GONE);
-                card8.setVisibility(View.VISIBLE);
-                card9.setVisibility(View.GONE);
-                card10.setVisibility(View.VISIBLE);
-                card11.setVisibility(View.GONE);
-                card12.setVisibility(View.GONE);
-                card13.setVisibility(View.GONE);
-            } else {
-                if (position == 3) {
-                    card1.setVisibility(View.VISIBLE);
-                    card2.setVisibility(View.GONE);
-                    card3.setVisibility(View.VISIBLE);
-                    card4.setVisibility(View.GONE);
-                    card5.setVisibility(View.GONE);
-                    card6.setVisibility(View.GONE);
-                    card7.setVisibility(View.GONE);
-                    card8.setVisibility(View.GONE);
-                    card9.setVisibility(View.GONE);
-                    card10.setVisibility(View.GONE);
-                    card11.setVisibility(View.GONE);
-                    card12.setVisibility(View.GONE);
-                    card13.setVisibility(View.VISIBLE);
-                } else {
-                    if (position == 4) {
-                        card1.setVisibility(View.GONE);
-                        card2.setVisibility(View.GONE);
-                        card3.setVisibility(View.GONE);
-                        card4.setVisibility(View.GONE);
-                        card5.setVisibility(View.VISIBLE);
-                        card6.setVisibility(View.GONE);
-                        card7.setVisibility(View.VISIBLE);
-                        card8.setVisibility(View.GONE);
-                        card9.setVisibility(View.VISIBLE);
-                        card10.setVisibility(View.GONE);
-                        card11.setVisibility(View.VISIBLE);
-                        card12.setVisibility(View.GONE);
-                        card13.setVisibility(View.GONE);
-                    } else {
-                        if (position == 5) {
-                            card1.setVisibility(View.GONE);
-                            card2.setVisibility(View.GONE);
-                            card3.setVisibility(View.GONE);
-                            card4.setVisibility(View.GONE);
-                            card5.setVisibility(View.GONE);
-                            card6.setVisibility(View.GONE);
-                            card7.setVisibility(View.GONE);
-                            card8.setVisibility(View.GONE);
-                            card9.setVisibility(View.VISIBLE);
-                            card10.setVisibility(View.GONE);
-                            card11.setVisibility(View.GONE);
-                            card12.setVisibility(View.GONE);
-                            card13.setVisibility(View.GONE);
-                        } else {
-                            if (position == 6) {
-                                card1.setVisibility(View.GONE);
-                                card2.setVisibility(View.GONE);
-                                card3.setVisibility(View.GONE);
-                                card4.setVisibility(View.GONE);
-                                card5.setVisibility(View.GONE);
-                                card6.setVisibility(View.GONE);
-                                card7.setVisibility(View.GONE);
-                                card8.setVisibility(View.GONE);
-                                card9.setVisibility(View.GONE);
-                                card10.setVisibility(View.GONE);
-                                card11.setVisibility(View.GONE);
-                                card12.setVisibility(View.VISIBLE);
-                                card13.setVisibility(View.GONE);
-                            }
-                        }
-
-                    }
-                }
-            }
+        } else if (position == 2) {
+            card1.setVisibility(View.GONE);
+            card2.setVisibility(View.GONE);
+            card3.setVisibility(View.GONE);
+            card4.setVisibility(View.VISIBLE);
+            card5.setVisibility(View.GONE);
+            card6.setVisibility(View.GONE);
+            card7.setVisibility(View.GONE);
+            card8.setVisibility(View.VISIBLE);
+            card9.setVisibility(View.GONE);
+            card10.setVisibility(View.VISIBLE);
+            card11.setVisibility(View.GONE);
+            card12.setVisibility(View.GONE);
+            card13.setVisibility(View.GONE);
+        } else if (position == 3) {
+            card1.setVisibility(View.VISIBLE);
+            card2.setVisibility(View.GONE);
+            card3.setVisibility(View.VISIBLE);
+            card4.setVisibility(View.GONE);
+            card5.setVisibility(View.GONE);
+            card6.setVisibility(View.GONE);
+            card7.setVisibility(View.GONE);
+            card8.setVisibility(View.GONE);
+            card9.setVisibility(View.GONE);
+            card10.setVisibility(View.GONE);
+            card11.setVisibility(View.GONE);
+            card12.setVisibility(View.GONE);
+            card13.setVisibility(View.VISIBLE);
+        } else if (position == 4) {
+            card1.setVisibility(View.GONE);
+            card2.setVisibility(View.GONE);
+            card3.setVisibility(View.GONE);
+            card4.setVisibility(View.GONE);
+            card5.setVisibility(View.VISIBLE);
+            card6.setVisibility(View.GONE);
+            card7.setVisibility(View.VISIBLE);
+            card8.setVisibility(View.GONE);
+            card9.setVisibility(View.VISIBLE);
+            card10.setVisibility(View.GONE);
+            card11.setVisibility(View.VISIBLE);
+            card12.setVisibility(View.GONE);
+            card13.setVisibility(View.GONE);
+        } else if (position == 5) {
+            card1.setVisibility(View.GONE);
+            card2.setVisibility(View.GONE);
+            card3.setVisibility(View.GONE);
+            card4.setVisibility(View.GONE);
+            card5.setVisibility(View.GONE);
+            card6.setVisibility(View.GONE);
+            card7.setVisibility(View.GONE);
+            card8.setVisibility(View.GONE);
+            card9.setVisibility(View.VISIBLE);
+            card10.setVisibility(View.GONE);
+            card11.setVisibility(View.GONE);
+            card12.setVisibility(View.GONE);
+            card13.setVisibility(View.GONE);
+        } else if (position == 6) {
+            card1.setVisibility(View.GONE);
+            card2.setVisibility(View.GONE);
+            card3.setVisibility(View.GONE);
+            card4.setVisibility(View.GONE);
+            card5.setVisibility(View.GONE);
+            card6.setVisibility(View.GONE);
+            card7.setVisibility(View.GONE);
+            card8.setVisibility(View.GONE);
+            card9.setVisibility(View.GONE);
+            card10.setVisibility(View.GONE);
+            card11.setVisibility(View.GONE);
+            card12.setVisibility(View.VISIBLE);
+            card13.setVisibility(View.GONE);
         }
-
     }
 
     @Override
@@ -240,7 +259,6 @@ public class MainRestaurant extends AppCompatActivity  {
 
     @Override
     public void onClick(View v) {
-
         if (v instanceof Button) {
             Button bt = (Button) v;
             switch (bt.getId()) {
@@ -304,71 +322,68 @@ public class MainRestaurant extends AppCompatActivity  {
                 case R.id.web7:
                     enterWeb("https://www.elrajol.es");
                     break;
-                    case R.id.web8:
+                case R.id.web8:
                     enterWeb("https://www.wagaya.es");
                     break;
-                    case R.id.web9:
+                case R.id.web9:
                     enterWeb("https://www.osgalegos.com");
                     break;
-                    case R.id.web10:
+                case R.id.web10:
                     enterWeb("https://www.chequerestaurante.com/cheque/granollers/wok-158");
                     break;
-                    case R.id.web11:
+                case R.id.web11:
                     enterWeb("https://www.fostershollywood.es");
                     break;
-                    case R.id.web12:
+                case R.id.web12:
                     enterWeb("https://www.elrajol.es");
                     break;
-                    case R.id.web13:
+                case R.id.web13:
                     enterWeb("https://www.telepizza.es");
                     break;
             }
-        } else {
-            if (v instanceof ImageView) {
-                ImageView iv = (ImageView) v;
-                switch (iv.getId()) {
-                    case R.id.img_viena:
-                        localitzacio("geo:@41.611671,2.3014409,17z");
-                        break;
-                    case R.id.img_naguabo:
-                        localitzacio("geo:@41.609842,2.2869893,17z");
-                        break;
-                    case R.id.img_burger:
-                        localitzacio("geo:@41.6098767,2.2716684,14z");
-                        break;
-                    case R.id.img_atarasi:
-                        localitzacio("geo:@41.6098529,2.2872166,17z");
-                        break;
-                    case R.id.img_montagu:
-                        localitzacio("geo:@41.6109199,2.2893636,21z");
-                        break;
-                    case R.id.img_pizza:
-                        localitzacio("geo:@41.6103098,2.302557,21z");
-                        break;
-                    case R.id.img_rajol:
-                        localitzacio("geo:@41.6081423,2.2889042,21z");
-                        break;
-                        case R.id.img_wagaya:
-                        localitzacio("geo:@41.6102037,2.2908371,21z");
-                        break;
-                        case R.id.img_gallegos:
-                        localitzacio("geo:@41.6176084,2.2924514,21z");
-                        break;
-                        case R.id.img_wok:
-                        localitzacio("geo:@41.5993707,2.2767628,21z");
-                        break;
-                        case R.id.img_pitapes:
-                        localitzacio("geo:@41.605491,2.28621,21z");
-                        break;
-                        case R.id.img_fosters:
-                        localitzacio("geo:@41.6096999,2.3028802,21z");
-                        break;
-                        case R.id.img_telepizza:
-                        localitzacio("geo:@41.6089511,2.2845576,21z");
-                        break;
-                }
+        } else if (v instanceof ImageView) {
+            ImageView iv = (ImageView) v;
+            switch (iv.getId()) {
+                case R.id.img_viena:
+                    localitzacio("geo:@41.611671,2.3014409,17z");
+                    break;
+                case R.id.img_naguabo:
+                    localitzacio("geo:@41.609842,2.2869893,17z");
+                    break;
+                case R.id.img_burger:
+                    localitzacio("geo:@41.6098767,2.2716684,14z");
+                    break;
+                case R.id.img_atarasi:
+                    localitzacio("geo:@41.6098529,2.2872166,17z");
+                    break;
+                case R.id.img_montagu:
+                    localitzacio("geo:@41.6109199,2.2893636,21z");
+                    break;
+                case R.id.img_pizza:
+                    localitzacio("geo:@41.6103098,2.302557,21z");
+                    break;
+                case R.id.img_rajol:
+                    localitzacio("geo:@41.6081423,2.2889042,21z");
+                    break;
+                case R.id.img_wagaya:
+                    localitzacio("geo:@41.6102037,2.2908371,21z");
+                    break;
+                case R.id.img_gallegos:
+                    localitzacio("geo:@41.6176084,2.2924514,21z");
+                    break;
+                case R.id.img_wok:
+                    localitzacio("geo:@41.5993707,2.2767628,21z");
+                    break;
+                case R.id.img_pitapes:
+                    localitzacio("geo:@41.605491,2.28621,21z");
+                    break;
+                case R.id.img_fosters:
+                    localitzacio("geo:@41.6096999,2.3028802,21z");
+                    break;
+                case R.id.img_telepizza:
+                    localitzacio("geo:@41.6089511,2.2845576,21z");
+                    break;
             }
-
         }
     }
 
@@ -385,5 +400,5 @@ public class MainRestaurant extends AppCompatActivity  {
     private void callHotel(String num) {
         Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + num));
         startActivity(intent);
-    }*/
+    }
 }
