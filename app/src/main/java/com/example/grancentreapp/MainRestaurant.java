@@ -345,43 +345,43 @@ public class MainRestaurant extends AppCompatActivity implements View.OnClickLis
             ImageView iv = (ImageView) v;
             switch (iv.getId()) {
                 case R.id.img_viena:
-                    localitzacio("geo:@41.611671,2.3014409,17z");
+                    localitzacio("geo:41.611671,2.3014409,17z");
                     break;
                 case R.id.img_naguabo:
-                    localitzacio("geo:@41.609842,2.2869893,17z");
+                    localitzacio("geo:41.609842,2.2869893,17z");
                     break;
                 case R.id.img_burger:
-                    localitzacio("geo:@41.6098767,2.2716684,14z");
+                    localitzacio("geo:41.6098767,2.2716684,14z");
                     break;
                 case R.id.img_atarasi:
-                    localitzacio("geo:@41.6098529,2.2872166,17z");
+                    localitzacio("geo:41.6098529,2.2872166,17z");
                     break;
                 case R.id.img_montagu:
-                    localitzacio("geo:@41.6109199,2.2893636,21z");
+                    localitzacio("geo:41.6109199,2.2893636,21z");
                     break;
                 case R.id.img_pizza:
-                    localitzacio("geo:@41.6103098,2.302557,21z");
+                    localitzacio("geo:41.6103098,2.302557,21z");
                     break;
                 case R.id.img_rajol:
-                    localitzacio("geo:@41.6081423,2.2889042,21z");
+                    localitzacio("geo:41.6081423,2.2889042,21z");
                     break;
                 case R.id.img_wagaya:
-                    localitzacio("geo:@41.6102037,2.2908371,21z");
+                    localitzacio("geo:41.6102037,2.2908371,21z");
                     break;
                 case R.id.img_gallegos:
-                    localitzacio("geo:@41.6176084,2.2924514,21z");
+                    localitzacio("geo:41.6176084,2.2924514,21z");
                     break;
                 case R.id.img_wok:
-                    localitzacio("geo:@41.5993707,2.2767628,21z");
+                    localitzacio("geo:41.5993707,2.2767628,21z");
                     break;
                 case R.id.img_pitapes:
-                    localitzacio("geo:@41.605491,2.28621,21z");
+                    localitzacio("geo:41.605491,2.28621,21z");
                     break;
                 case R.id.img_fosters:
-                    localitzacio("geo:@41.6096999,2.3028802,21z");
+                    localitzacio("geo:41.6096999,2.3028802,21z");
                     break;
                 case R.id.img_telepizza:
-                    localitzacio("geo:@41.6089511,2.2845576,21z");
+                    localitzacio("geo:41.6089511,2.2845576,21z");
                     break;
             }
         }
