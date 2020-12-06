@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -30,10 +29,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/primer_h"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -43,8 +39,7 @@
 
                 <ImageView
                     android:id="@+id/img_fonda"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
+                    style="@style/imgStyle"
                     android:src="@drawable/fonda" />
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -60,9 +55,7 @@
                             android:text="@string/titol1_hotel"/>
                         <TextView
                             android:id="@+id/hdesc1"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                           android:layout_gravity="center"
+                            style="@style/descriptionStyle"
                             android:text="@string/hdesc1" />
                     </LinearLayout>
                     <LinearLayout
@@ -77,16 +70,11 @@
                             android:layout_height="wrap_content">
                             <Button
                                 android:id="@+id/trucar1"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:background="@color/transparent"
+                                style="@style/buttonStyle"
                                 android:text="@string/telf" />
                             <Button
                                 android:id="@+id/web1"
-                                android:layout_marginStart="10dp"
-                                android:background="@color/transparent"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                style="@style/buttonStyle"
                                 android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
@@ -95,10 +83,7 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/segon_h"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -108,8 +93,7 @@
 
                 <ImageView
                     android:id="@+id/img_granollers"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
+                    style="@style/imgStyle"
                     android:src="@drawable/granollers" />
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -125,9 +109,7 @@
                             android:text="@string/titol2_hotel"/>
                         <TextView
                             android:id="@+id/hdesc2"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                           android:layout_gravity="center"
+                            style="@style/descriptionStyle"
                             android:text="@string/hdesc2" />
                     </LinearLayout>
                     <LinearLayout
@@ -142,16 +124,11 @@
                             android:layout_height="wrap_content">
                             <Button
                                 android:id="@+id/trucar2"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:background="@color/transparent"
+                                style="@style/buttonStyle"
                                 android:text="@string/telf" />
                             <Button
                                 android:id="@+id/web2"
-                                android:layout_marginStart="10dp"
-                                android:background="@color/transparent"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                style="@style/buttonStyle"
                                 android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
@@ -160,10 +137,7 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/tercer_h"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -173,8 +147,7 @@
 
                 <ImageView
                     android:id="@+id/img_iris"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
+                    style="@style/imgStyle"
                     android:src="@drawable/iris" />
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -190,9 +163,7 @@
                             android:text="@string/titol3_hotel"/>
                         <TextView
                             android:id="@+id/hdesc3"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                           android:layout_gravity="center"
+                            style="@style/descriptionStyle"
                             android:text="@string/hdesc3" />
                     </LinearLayout>
                     <LinearLayout
@@ -207,16 +178,11 @@
                             android:layout_height="wrap_content">
                             <Button
                                 android:id="@+id/trucar3"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:background="@color/transparent"
+                                style="@style/buttonStyle"
                                 android:text="@string/telf" />
                             <Button
                                 android:id="@+id/web3"
-                                android:layout_marginStart="10dp"
-                                android:background="@color/transparent"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                style="@style/buttonStyle"
                                 android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
@@ -225,10 +191,7 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/quart_h"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -238,8 +201,7 @@
 
                 <ImageView
                     android:id="@+id/img_bib"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
+                    style="@style/imgStyle"
                     android:src="@drawable/bib" />
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -255,9 +217,7 @@
                             android:text="@string/titol4_hotel"/>
                         <TextView
                             android:id="@+id/hdesc4"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                           android:layout_gravity="center"
+                            style="@style/descriptionStyle"
                             android:text="@string/hdesc4" />
                     </LinearLayout>
                     <LinearLayout
@@ -272,16 +232,11 @@
                             android:layout_height="wrap_content">
                             <Button
                                 android:id="@+id/trucar4"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:background="@color/transparent"
+                                style="@style/buttonStyle"
                                 android:text="@string/telf" />
                             <Button
                                 android:id="@+id/web4"
-                                android:layout_marginStart="10dp"
-                                android:background="@color/transparent"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                style="@style/buttonStyle"
                                 android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
@@ -290,10 +245,7 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/cinque_h"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -303,8 +255,7 @@
 
                 <ImageView
                     android:id="@+id/img_atenea"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
+                    style="@style/imgStyle"
                     android:src="@drawable/atenea" />
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -320,9 +271,7 @@
                             android:text="@string/titol5_hotel"/>
                         <TextView
                             android:id="@+id/hdesc5"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                           android:layout_gravity="center"
+                            style="@style/descriptionStyle"
                             android:text="@string/hdesc5" />
                     </LinearLayout>
                     <LinearLayout
@@ -337,16 +286,11 @@
                             android:layout_height="wrap_content">
                             <Button
                                 android:id="@+id/trucar5"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:background="@color/transparent"
+                                style="@style/buttonStyle"
                                 android:text="@string/telf" />
                             <Button
                                 android:id="@+id/web5"
-                                android:layout_marginStart="10dp"
-                                android:background="@color/transparent"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                style="@style/buttonStyle"
                                 android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
@@ -355,10 +299,7 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/sise_h"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_gravity="center">
+            style="@style/cardViewStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -368,8 +309,7 @@
 
                 <ImageView
                     android:id="@+id/img_h"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
+                    style="@style/imgStyle"
                     android:src="@drawable/hotelh" />
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -385,9 +325,7 @@
                             android:text="@string/titol6_hotel"/>
                         <TextView
                             android:id="@+id/hdesc6"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                           android:layout_gravity="center"
+                            style="@style/descriptionStyle"
                             android:text="@string/hdesc6" />
                     </LinearLayout>
                     <LinearLayout
@@ -402,27 +340,20 @@
                             android:layout_height="wrap_content">
                             <Button
                                 android:id="@+id/trucar6"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:background="@color/transparent"
+                                style="@style/buttonStyle"
                                 android:text="@string/telf" />
                             <Button
                                 android:id="@+id/web6"
-                                android:layout_marginStart="10dp"
-                                android:background="@color/transparent"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                style="@style/buttonStyle"
                                 android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-        </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
             android:id="@+id/sete_h"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_margin="10dp"
-        android:layout_gravity="center">
+            style="@style/cardViewStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -432,8 +363,7 @@
 
                 <ImageView
                     android:id="@+id/img_ciutat"
-                    android:layout_width="140dp"
-                    android:layout_height="180dp"
+                    style="@style/imgStyle"
                     android:src="@drawable/ciutat" />
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -449,9 +379,7 @@
                             android:text="@string/titol7_hotel"/>
                         <TextView
                             android:id="@+id/hdesc7"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                           android:layout_gravity="center"
+                            style="@style/descriptionStyle"
                             android:text="@string/hdesc7" />
                     </LinearLayout>
                     <LinearLayout
@@ -466,16 +394,11 @@
                             android:layout_height="wrap_content">
                             <Button
                                 android:id="@+id/trucar7"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:background="@color/transparent"
+                                style="@style/buttonStyle"
                                 android:text="@string/telf" />
                             <Button
                                 android:id="@+id/web7"
-                                android:layout_marginStart="10dp"
-                                android:background="@color/transparent"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                style="@style/buttonStyle"
                                 android:text="@string/web" />
                         </LinearLayout>
                     </LinearLayout>
