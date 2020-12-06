@@ -17,12 +17,11 @@
     <style name="imgStyle">
         <item name="android:layout_height">180dp</item>
         <item name="android:layout_width">140dp</item>
-        <item name="android:layout_gravity">center</item>
     </style>
     <style name="buttonStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">-20dp</item>
+        <item name="android:layout_marginTop">-10dp</item>
         <item name="android:layout_marginStart">10dp</item>
         <item name="android:background">@color/transparent</item>
     </style>
@@ -44,9 +43,9 @@
     <style name="descriptionStyle">
         <item name="android:layout_width">200dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_alignParentEnd">true</item>
-        <item name="android:layout_marginEnd">-5dp</item>
         <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginStart">20dp</item>
+
     </style>
     <style name="shadoweffect">
         <item name="android:paddingLeft">4px</item>

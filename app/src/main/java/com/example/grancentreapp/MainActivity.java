@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button bt_business,bt_restaurants,bt_movies,bt_weather,bt_hotels,bt_knowledge;
+    Button bt_business,bt_restaurants,bt_movies,bt_weather,bt_hotels,bt_parking;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,13 +15,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_movies = findViewById(R.id.bt_movies);
         bt_weather = findViewById(R.id.bt_weather);
         bt_hotels = findViewById(R.id.bt_hotels);
-        bt_knowledge = findViewById(R.id.bt_knowledge);
+        bt_parking = findViewById(R.id.bt_parking);
         bt_business.setOnClickListener(this);
         bt_restaurants.setOnClickListener(this);
         bt_movies.setOnClickListener(this);
         bt_weather.setOnClickListener(this);
         bt_hotels.setOnClickListener(this);
-        bt_knowledge.setOnClickListener(this);
+        bt_parking.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -45,8 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent_hotels=new Intent(this,MainHotel.class);
                 startActivity(intent_hotels);
                 break;
-            case R.id.bt_knowledge:
-                //Intent intent_knowledge=new Intent(this,ActivityKnowledge);
+            case R.id.bt_parking:
+                Intent intent_parking=new Intent(this,RecyclerViewActivity.class);
+                startActivity(intent_parking);
                 break;
         }
     }
