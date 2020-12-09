@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="vertical"
+        tools:context=".MainHotels">
+
+        <TextView
+            android:id="@+id/titol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titol_rest"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:entries="@array/restaurant_array" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/primer"
+            style="@style/cardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_viena"
+                    style="@style/imgStyle"
+                    android:src="@drawable/viena" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/titleStyle"
+                            android:text="@string/titol1_rest" />
+
+                        <TextView
+                            android:id="@+id/desc1"
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/rat1"
+                            style="@style/ratingStyle" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp">
+
+                            <Button
+                                android:id="@+id/trucar1"
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
+                            <Button
+                                android:id="@+id/web1"
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/segon"
+            style="@style/cardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_naguabo"
+                    style="@style/imgStyle"
+                    android:src="@drawable/naguabo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/titleStyle"
+                            android:text="@string/titol2_rest" />
+
+                        <TextView
+                            android:id="@+id/desc2"
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/rat2"
+                            style="@style/ratingStyle" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp">
+
+                            <Button
+                                android:id="@+id/trucar2"
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
+                            <Button
+                                android:id="@+id/web2"
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tercer"
+            style="@style/cardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_burger"
+                    style="@style/imgStyle"
+                    android:src="@drawable/burger" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/titleStyle"
+                            android:text="@string/titol3_rest" />
+
+                        <TextView
+                            android:id="@+id/desc3"
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/rat3"
+                            style="@style/ratingStyle" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp">
+
+                            <Button
+                                android:id="@+id/trucar3"
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
+                            <Button
+                                android:id="@+id/web3"
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/quart"
+            style="@style/cardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_atarasi"
+                    style="@style/imgStyle"
+                    android:src="@drawable/atarasii" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/titleStyle"
+                            android:text="@string/titol4_rest" />
+
+                        <TextView
+                            android:id="@+id/desc4"
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/rat4"
+                            style="@style/ratingStyle"
+                            android:layout_gravity="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp">
+
+                            <Button
+                                android:id="@+id/trucar4"
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
+                            <Button
+                                android:id="@+id/web4"
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cinque"
+            style="@style/cardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_montagu"
+                    style="@style/imgStyle"
+                    android:src="@drawable/montagu" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/titleStyle"
+                            android:text="@string/titol5_rest" />
+
+                        <TextView
+                            android:id="@+id/desc5"
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/rat5"
+                            style="@style/ratingStyle"
+                            android:layout_gravity="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp">
+
+                            <Button
+                                android:id="@+id/trucar5"
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
+                            <Button
+                                android:id="@+id/web5"
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sise"
+            style="@style/cardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_pizza"
+                    style="@style/imgStyle"
+                    android:src="@drawable/pizza1900" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/titleStyle"
+                            android:text="@string/titol6_rest" />
+
+                        <TextView
+                            android:id="@+id/desc6"
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc6" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/rat6"
+                            style="@style/ratingStyle"
+                            android:layout_gravity="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp">
+
+                            <Button
+                                android:id="@+id/trucar6"
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
+                            <Button
+                                android:id="@+id/web6"
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sete"
+            style="@style/cardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_rajol"
+                    style="@style/imgStyle"
+                    android:src="@drawable/rajol" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/titleStyle"
+                            android:text="@string/titol7_rest" />
+
+                        <TextView
+                            android:id="@+id/desc7"
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/rat7"
+                            style="@style/ratingStyle"
+                            android:layout_gravity="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp">
+
+                            <Button
+                                android:id="@+id/trucar7"
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
+                            <Button
+                                android:id="@+id/web7"
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/vuite"
+            style="@style/cardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_wagaya"
+                    style="@style/imgStyle"
+                    android:src="@drawable/wagaya" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/titleStyle"
+                            android:text="@string/titol8_rest" />
+
+                        <TextView
+                            android:id="@+id/desc8"
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/rat8"
+                            style="@style/ratingStyle"
+                            android:layout_gravity="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp">
+
+                            <Button
+                                android:id="@+id/trucar8"
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
+                            <Button
+                                android:id="@+id/web8"
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/nove"
+            style="@style/cardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_gallegos"
+                    style="@style/imgStyle"
+                    android:src="@drawable/gallegos" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/titleStyle"
+                            android:text="@string/titol9_rest" />
+
+                        <TextView
+                            android:id="@+id/desc9"
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc9" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/rat9"
+                            style="@style/ratingStyle"
+                            android:layout_gravity="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp">
+
+                            <Button
+                                android:id="@+id/trucar9"
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
+                            <Button
+                                android:id="@+id/web9"
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/deue"
+            style="@style/cardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_wok"
+                    style="@style/imgStyle"
+                    android:src="@drawable/gallegos" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/titleStyle"
+                            android:text="@string/titol10_rest" />
+
+                        <TextView
+                            android:id="@+id/desc10"
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc10" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/rat10"
+                            style="@style/ratingStyle"
+                            android:layout_gravity="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp">
+
+                            <Button
+                                android:id="@+id/trucar10"
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
+                            <Button
+                                android:id="@+id/web10"
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/onze"
+            style="@style/cardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_pitapes"
+                    style="@style/imgStyle"
+                    android:src="@drawable/pitapes" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/titleStyle"
+                            android:text="@string/titol11_rest" />
+
+                        <TextView
+                            android:id="@+id/desc11"
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc11" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/rat11"
+                            style="@style/ratingStyle"
+                            android:layout_gravity="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp">
+
+                            <Button
+                                android:id="@+id/trucar11"
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
+                            <Button
+                                android:id="@+id/web11"
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dotze"
+            style="@style/cardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_fosters"
+                    style="@style/imgStyle"
+                    android:src="@drawable/fosters" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/titleStyle"
+                            android:text="@string/titol12_rest" />
+
+                        <TextView
+                            android:id="@+id/desc12"
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/rat12"
+                            style="@style/ratingStyle"
+                            android:layout_gravity="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp">
+
+                            <Button
+                                android:id="@+id/trucar12"
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
+                            <Button
+                                android:id="@+id/web12"
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tretze"
+            style="@style/cardViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_telepizza"
+                    style="@style/imgStyle"
+                    android:src="@drawable/telepizza" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/titleStyle"
+                            android:text="@string/titol13_rest" />
+
+                        <TextView
+                            android:id="@+id/desc13"
+                            style="@style/descriptionStyle"
+                            android:text="@string/desc12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/rat13"
+                            style="@style/ratingStyle"
+                            android:layout_gravity="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp">
+
+                            <Button
+                                android:id="@+id/trucar13"
+                                style="@style/buttonStyle"
+                                android:text="@string/telf" />
+
+                            <Button
+                                android:id="@+id/web13"
+                                style="@style/buttonStyle"
+                                android:text="@string/web" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

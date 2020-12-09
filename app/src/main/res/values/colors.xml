@@ -3,4 +3,16 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="BLACK">#000000</color>
+    <color name="WHITE">#FFFFFF</color>
+    <color name="ReyLeon">#F4A42D</color>
+    <color name="EndGame">#443881</color>
+    <color name="Avatar">#108db7</color>
+    <color name="Shrek">#96ab33</color>
+    <color name="Venom">#010301</color>
+    <color name="Xmen">#d9a52b</color>
+    <color name="Spideman">#a30f1f</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>

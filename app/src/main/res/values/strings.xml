@@ -1,3 +1,72 @@
 <resources>
     <string name="app_name">GranCentre APP</string>
+    <!--Strings de hoteles-->
+    <string name="titol1_hotel">Fonda Europa</string>
+    <string name="titol2_hotel">Hotel Granollers</string>
+    <string name="titol3_hotel">Hotel Iris</string>
+    <string name="titol4_hotel">Hotel B&amp;B</string>
+    <string name="titol5_hotel">Hotel Atenea</string>
+    <string name="titol6_hotel">Hotel H</string>
+    <string name="titol7_hotel">Hotel Ciutat</string>
+    <string name="titol_hotel">Hotels</string>
+    <string name="titol_rest">Restaurants</string>
+    <string name="titol_park">Parkings</string>
+    <string name="hdesc1">Hotel amb encant a Granollers. La Fonda Europa, situada al centre históric de la ciutat, té més de 300 anys d\'história.</string>
+    <string name="hdesc2">Hotel de 3 estrelles situat a  Av Francesc Macià, 300, Granollers, Barcelona. Reservi online al millor preu</string>
+    <string name="hdesc3">Aquest modern hotel està situat al centre de la ciutat, a 3 km del Circuit de Catalunya i a 5 km del complex comercial La Roca Village</string>
+    <string name="hdesc4">Estàs buscant hotels barats a Barcelona? Ja pots deixar de buscar! B&amp;B Hotel Granollers t\'ofereix un allotjament econòmic i ben comunicat amb la ciutat costanera.</string>
+    <string name="hdesc5">Hotel que es troba al centre comercial de Granollers a 20 Km de Barcelona, a prop del Circuit de Montmeló i comunicat amb les principals vies d\'accés.</string>
+    <string name="hdesc6">Reserva al millor preu la teva habitació per dies o per hores.Es troba junt a l\'autopista E15, a les afores de la ciutat y a 20 minuts en cotxe de la ciutat de Barcelona </string>
+    <string name="hdesc7">Ubicat en una propietat arbrada davant d\'una rotonda, es troba a 13 minuts a peu de l\'estació de tren Granollers Centre i a 15 minuts a peu de centre històric de la ciutat.</string>
+    <string name="telf">&#128222;Trucar</string>
+    <string name="web">Web</string>
+    <string name="rating">Votar</string>
+    <!--Strings de restaurantes-->
+    <string name="desc1">Establiment amb una ample oferta culinaria europea on predominen antigues tradicions</string>
+    <string name="desc2">Restaurant amb una gran oferta culinaria de pizzes, a més de carnes i verdures de temporada.</string>
+    <string name="desc3">Establiment que proporciona menjar rapid com són hamburgueses, patates, pollastre arrebosat,…</string>
+    <string name="desc4">Restaurant japonés amb una ample oferta de menjar asiatic contemporani i tradicional al qual no podràs resisir-te. </string>
+    <string name="desc5">La petita fàbrica d\'entrepans al centre de Granollers que t\'ofereix una carta variada,per a reunions d\'amics o de feina. </string>
+    <string name="desc6"> Una nova forma de gaudir el menjar. Una experiència única per viure en companyia. Som especialistes en plats tradicionals italians: pizzes, pastes,…</string>
+    <string name="desc7">Al cor de la ciutat de Granollers, en un edifici emblemàtic neix el nostre restaurant. Espectacular disseny, lluminós, modern, acollidor amb la nostre essència.</string>
+    <string name="desc8">Des del principi busquem un equilibri entre el millor producte, un ambient acollidor i un bon servei logrant obtenir una optima relació qualitat / preu</string>
+    <string name="desc9">En el restaurante marisquería Os Galegos llevamos la cocina gallega tradicional al centro de Granollers.</string>
+    <string name="desc10">Bufet lliure que combina menjar tradicional chinés amb menjar tradicional español</string>
+    <string name="desc11">Un restaurant amb un servei de qualitat, un espai comfortable on compartir les millor tapes, combinades amb una carta selecta de vins.</string>
+    <string name="desc12">El gust del menjar americà: hamburgueses, costelles… Descobreix la nostra carta i troba el teu restaurant més proper.</string>
+    <string name="desc13">Pots demanar pizzes i menjar a domicili i per emportar. Demana la teva pizza per internet, gaudeix de les promocions online.</string>
+    <string name="titol1_rest">Viena</string>
+    <string name="titol2_rest">Naguabo</string>
+    <string name="titol3_rest">Burger King</string>
+    <string name="titol4_rest">Atarasii</string>
+    <string name="titol5_rest">Montagu</string>
+    <string name="titol6_rest">Pizzeria 1900</string>
+    <string name="titol7_rest">El Rajol</string>
+    <string name="titol8_rest">Wagaya</string>
+    <string name="titol9_rest">Os Gallegos</string>
+    <string name="titol10_rest">Wok 158</string>
+    <string name="titol11_rest">Pitapes</string>
+    <string name="titol12_rest">Foster\'s Hollywood</string>
+    <string name="titol13_rest">Telepizza</string>
+    <!-- Strings parkings -->
+    <string name="titol1_park">Parquing Can Trullás</string>
+    <string name="titol2_park">Parquing Public Teatre Auditori</string>
+    <string name="titol3_park">Parquing El Sot</string>
+    <!-- Array elementos de los spinner-->
+    <string-array name="spinner_array">
+        <item>All</item>
+        <item>&#9734;&#9734;</item>
+        <item>&#9734;&#9734;&#9734;</item>
+        <item>&#9734;&#9734;&#9734;&#9734;</item>
+    </string-array>
+    <string-array name="restaurant_array">
+        <item>All</item>
+        <item>Italià</item>
+        <item>Japonés</item>
+        <item>Menjar ràpid</item>
+    </string-array>
+    <string name="nombre">Nombre : </string>
+    <string name="apellido">Apellidos : </string>
+    <string name="edad">Edad : </string>
+    <string name="sueldo">Sueldo : </string>
 </resources>

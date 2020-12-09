@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MainBusines"></activity>
+        <activity android:name=".MainHotel" />
+        <activity android:name=".RecyclerViewActivity" />
+        <activity android:name=".MainRestaurant" />
+        <activity android:name=".MainWeather" />
+        <activity android:name=".MainMovies" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
