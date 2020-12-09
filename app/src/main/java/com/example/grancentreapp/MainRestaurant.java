@@ -335,7 +335,7 @@ public class MainRestaurant extends AppCompatActivity implements View.OnClickLis
                     enterWeb("https://www.fostershollywood.es");
                     break;
                 case R.id.web12:
-                    enterWeb("https://www.elrajol.es");
+                    enterWeb("https://www.pitapes.cat/");
                     break;
                 case R.id.web13:
                     enterWeb("https://www.telepizza.es");

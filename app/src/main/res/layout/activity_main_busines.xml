@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    tools:context=".MainBusines"
+android:background="@color/black">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Negocis"
+    android:textAlignment="center"
+    android:textColor="@color/white"
+    android:textSize="40sp" />
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvNegocis"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"/>
+</LinearLayout>
